@@ -1,0 +1,101 @@
+/*Sidebar Widget Starts Here*/
+.widget {
+    background: $white-color;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 9px 20px 0px rgba(22, 26, 57, 0.36);      
+    .title {
+        border-bottom: 1px solid  rgb(234, 231, 231);
+        text-align: center;
+        padding-bottom: 18px;
+        margin-bottom: 30px;
+    }
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .custom-button {
+        padding: 0 25px;
+        line-height: 40px;
+        font-size: 16px;
+        text-transform: uppercase;
+        background: -moz-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+        background: -webkit-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+        background: -ms-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+        box-shadow: 0px 3px 5px 0px rgba(162, 44, 202, 0.3);          
+    }
+    .ui-state-default {
+        width: 19px;
+        height: 19px;
+        @include border-radius(50%);
+        display: block;
+        border: none;
+        @include border-radius(50%);
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 9px 20px 0px rgba(22, 26, 57, 0.36);  outline: none;cursor: pointer; top: -9px;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 13px;
+            height: 13px;
+            @include border-radius(50%);
+            background: -moz-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+            background: -webkit-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+            background: -ms-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+            top: 3px;
+            left: 3px;
+            display: block;
+        }
+    }
+    .ui-slider-range {
+        background: -moz-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+        background: -webkit-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+        background: -ms-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+    }
+    .ui-widget.ui-widget-content {
+        height: 3px;
+        background: #d2d2d2;
+        border: none;
+        margin-bottom: 25px;
+    }
+}
+.widget-form-group {
+    @extend %flex;
+    align-items: center;
+    margin-bottom: 6px;
+    &:last-child {margin-bottom: 0;}
+    input {
+        width: 14px;
+        height: 14px;
+    }
+    label {
+        margin: 0;
+        width: calc(100% - 14px);
+        padding-left: 8px;
+        font-size: 14px;
+        color: $title-color;
+        font-weight: 500;
+    }
+}
+.price-range {
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    label {
+        margin: 0;
+        font-weight: 500;
+        color: $title-color;
+    }
+    input {
+        height: unset;
+        width: unset;
+        padding: 7px;
+        background: transparent;
+        border: none;
+        text-align: right;
+        font-weight: 500;
+        color: $title-color;
+        padding-right: 0;
+    }
+}

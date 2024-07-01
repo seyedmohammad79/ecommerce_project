@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+/*
+Template Name: Sbidu - Bid & Auction HTML Template
+Template URI: http://pixner.net/sbidu/
+Author: uiaxis
+Author URI: https://themeforest.net/user/uiaxis
+Version: 1.0.0
+Text Domain: 
+*/
+/*
+///// CSS Index \\
+01. Reset CSS Start
+---------------------------
+02. General CSS
+---------------------------
+03. Section Header CSS
+---------------------------
+04. Footer Section CSS
+---------------------------
+05. Header  Section CSS
+---------------------------
+06. Cart Area Sidebar CSS
+---------------------------
+07. Banner Section CSS
+----Banner Section Two CSS
+----Banner Section Four CSS
+----Banner Section 5  CSS
+---------------------------
+08. Browse Slider Section CSS
+---------------------------
+09. Hero Section CSS
+---------------------------
+10. Sidebar Widget CSS
+---------------------------
+11. Client Section CSS
+---------------------------
+12. How Section CSS
+---------------------------
+13. Art & Electronics Auction Section CSS
+---------------------------
+14. Coins & Bullions Auction Section CSS
+---------------------------
+15. Jewelry Section CSS
+---------------------------
+16. Call In Section CSS
+---------------------------
+17. Popular Auction Section CSS
+---------------------------
+18. Real Estate Auction Section CSS
+---------------------------
+19. Upcoming Auction Section CSS
+---------------------------
+20. Trending Auction Section CSS
+---------------------------
+21. Fetured Auction Section CSS
+---------------------------
+22. Team Section CSS
+---------------------------
+23. Overview  Section CSS
+---------------------------
+24. Counter Section CSS
+---------------------------
+25. About  Section CSS
+---------------------------
+26. Account Section CSS
+---------------------------
+27. Contact Section CSS
+---------------------------
+28. Error Section CSS
+---------------------------
+29. Faq Section CSS
+---------------------------
+30. Product Details Section CSS
+---------------------------
+31. Dashboard Section CSS
+---------------------------
+32. Profile Section CSS
+---------------------------
+33. Alert Section CSS
+---------------------------
+34. Refferral Section CSS
+---------------------------
+35. All Animation Section CSS
+---------------------------
+*/
+@import '_abstracts/_mixins';
+@import '_abstracts/_variables';
+@import '_base/_reset';
+@import '_base/_global';
+@import '_base/_typography';
+@import '_base/_about';
+@import '_layout/_footer';
+@import '_layout/_forms';
+@import '_layout/_header';
+@import '_layout/_banner';
+@import '_layout/_sidebar';
+@import '_layout/_section';
+@import '_layout/_animation';
+@import '_layout/_blog';
+@import '_components/_buttons';
+
+/*All Animation Ends Here*/

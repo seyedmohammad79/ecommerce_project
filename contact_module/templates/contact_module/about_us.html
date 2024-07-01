@@ -1,0 +1,463 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>درباره ما</title>
+
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/all.min.css">
+    <link rel="stylesheet" href="/static/assets/css/animate.css">
+    <link rel="stylesheet" href="/static/assets/css/nice-select.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.min.css">
+    <link rel="stylesheet" href="/static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/static/assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+
+    <link rel="shortcut icon" href="/static/assets/images/favicon2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    {% include 'header_component.html' %}
+
+    <!--============= Cart Section Starts Here =============-->
+    <div class="cart-sidebar-area">
+        <div class="top-content">
+            <a href="index.html" class="logo">
+                <img src="/static/assets/images/logo/logo2.png" alt="logo">
+            </a>
+            <span class="side-sidebar-close-btn"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="bottom-content">
+            <div class="cart-products">
+                <h4 class="title">سبد خرید</h4>
+                <div class="single-product-item">
+                    <div class="thumb">
+                        <a href="#0"><img src="/static/assets/images/shop/shop01.jpg" alt="shop"></a>
+                    </div>
+                    <div class="content">
+                        <h4 class="title"><a href="#0">مداد رنگی</a></h4>
+                        <div class="price"><span class="pprice">80.000 تومان</span> <del class="dprice">120.000 </del></div>
+                        <a href="#" class="remove-cart">حذف</a>
+                    </div>
+                </div>
+                <div class="single-product-item">
+                    <div class="thumb">
+                        <a href="#0"><img src="/static/assets/images/shop/shop02.jpg" alt="shop"></a>
+                    </div>
+                    <div class="content">
+                        <h4 class="title"><a href="#0">گلدان</a></h4>
+                        <div class="price"><span class="pprice">80.000 تومان</span> <del class="dprice">120.000 </del></div>
+                        <a href="#" class="remove-cart">حذف</a>
+                    </div>
+                </div>
+                <div class="single-product-item">
+                    <div class="thumb">
+                        <a href="#0"><img src="/static/assets/images/shop/shop03.jpg" alt="shop"></a>
+                    </div>
+                    <div class="content">
+                        <h4 class="title"><a href="#0">مقاله هنری</a></h4>
+                        <div class="price"><span class="pprice">80.000 تومان</span> <del class="dprice">120.000 </del></div>
+                        <a href="#" class="remove-cart">حذف</a>
+                    </div>
+                </div>
+                <div class="single-product-item">
+                    <div class="thumb">
+                        <a href="#0"><img src="/static/assets/images/shop/shop04.jpg" alt="shop"></a>
+                    </div>
+                    <div class="content">
+                        <h4 class="title"><a href="#0">ساعت</a></h4>
+                        <div class="price"><span class="pprice">80.000 تومان</span> <del class="dprice">120.000 </del></div>
+                        <a href="#" class="remove-cart">حذف</a>
+                    </div>
+                </div>
+                <div class="single-product-item">
+                    <div class="thumb">
+                        <a href="#0"><img src="/static/assets/images/shop/shop05.jpg" alt="shop"></a>
+                    </div>
+                    <div class="content">
+                        <h4 class="title"><a href="#0">کتاب</a></h4>
+                        <div class="price"><span class="pprice">80.000 تومان</span> <del class="dprice">120.000 </del></div>
+                        <a href="#" class="remove-cart">حذف</a>
+                    </div>
+                </div>
+                <div class="btn-wrapper text-center">
+                    <a href="#0" class="custom-button"><span>بررسی</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--============= Cart Section Ends Here =============-->
+
+
+    <!--============= Hero Section Starts Here =============-->
+    <div class="hero-section">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="{% url 'home_page' %}">خانه</a>
+                </li>
+                <li>
+                    <a href="#0">صفحات</a>
+                </li>
+                <li>
+                    <span>درباره ما</span>
+                </li>
+            </ul>
+        </div>
+        <div class="bg_img hero-bg bottom_center" data-background="/static/assets/images/banner/hero-bg.png"></div>
+    </div>
+    <!--============= Hero Section Ends Here =============-->
+
+
+    <!--============= About Section Starts Here =============-->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-wrapper mt--100 mt-lg--440 padding-top">
+                <div class="row">
+                    <div class="col-lg-7 col-xl-6">
+                        <div class="about-content">
+                            <h4 class="subtitle">درباره ما</h4>
+                            <h2 class="title"><span class="d-block">تیم جوان</span>متشکل از افراد با استعداد</h2>
+                            <p>نوآوری ما را به عنوان پیشرو در سیستم حراج آنلاین تبدیل کرده است</p>
+                            <div class="item-area">
+                                <div class="item">
+                                    <div class="thumb">
+                                        <img src="/static/assets/images/about/01.png" alt="about">
+                                    </div>
+                                    <p>برنده جایزه نوآوری</p>
+                                </div>
+                                <div class="item">
+                                    <div class="thumb">
+                                        <img src="/static/assets/images/about/02.png" alt="about">
+                                    </div>
+                                    <p>مشتری محور</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-thumb">
+                    <img src="/static/assets/images/about/about2.jpg" alt="about">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= About Section Ends Here =============-->
+
+
+    <!--============= Counter Section Starts Here =============-->
+    <div class="counter-section padding-top mt--10">
+        <div class="container">
+            <div class="row justify-content-center mb-30-none">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="counter-item">
+                        <h3 class="counter-header">
+                            <span class="title counter">62</span><span class="title">میلیون</span>
+                        </h3>
+                        <p>موارد حراج شده</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="counter-item">
+                        <h3 class="counter-header">
+                            <span class="title counter">800</span><span>تومان</span>
+                        </h3>
+                        <p>در پیشنهادات امن</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="counter-item">
+                        <h3 class="counter-header">
+                            <span class="title counter">63</span><span class="title">میلیون</span>
+                        </h3>
+                        <p>موارد حراج شده</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="counter-item">
+                        <h3 class="counter-header">
+                            <span>0</span><span class="title counter">5</span>
+                        </h3>
+                        <p>کارشناسان حراج</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--============= Counter Section Ends Here =============-->
+
+
+    <!--============= Overview Section Starts Here =============-->
+    <section class="overview-section padding-top">
+        <div class="container mw-lg-100 p-lg-0">
+            <div class="row m-0">
+                <div class="col-lg-6 p-0">
+                    <div class="overview-content">
+                        <div class="section-header text-lg-right">
+                            <h2 class="title">دلیل ساخت سامانه چه بود؟</h2>
+                            <p>حراج خانه این امکان را فراهم کرده است تا کاربران بدون واسط کالای دست دوم خود را از طریق مزایده و حراجی و با قیمت مناسب به فروش برسانند.</p>
+                        </div>
+                        <div class="row mb--50">
+                            <div class="col-sm-6">
+                                <div class="expert-item">
+                                    <div class="thumb">
+                                        <img src="/static/assets/images/overview/01.png" alt="overview">
+                                    </div>
+                                    <div class="content">
+                                        <h6 class="title">حراج در زمان واقعی</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="expert-item">
+                                    <div class="thumb">
+                                        <img src="/static/assets/images/overview/02.png" alt="overview">
+                                    </div>
+                                    <div class="content">
+                                        <h6 class="title">خرید با قیمت مناسب</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="expert-item">
+                                    <div class="thumb">
+                                        <img src="/static/assets/images/overview/03.png" alt="overview">
+                                    </div>
+                                    <div class="content">
+                                        <h6 class="title">اعلامیه برنده</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="expert-item">
+                                    <div class="thumb">
+                                        <img src="/static/assets/images/overview/04.png" alt="overview">
+                                    </div>
+                                    <div class="content">
+                                        <h6 class="title">اطلاعیه های مناسب</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="expert-item">
+                                    <div class="thumb">
+                                        <img src="/static/assets/images/overview/05.png" alt="overview">
+                                    </div>
+                                    <div class="content">
+                                        <h6 class="title">نمایش تمام سابقه پیشنهاد دهندگان</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="expert-item">
+                                    <div class="thumb">
+                                        <img src="/static/assets/images/overview/06.png" alt="overview">
+                                    </div>
+                                    <div class="content">
+                                        <h6 class="title">افزودن به لیست تماشا</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-30 pr-0">
+                    <div class="w-100 h-100 bg_img" id="overview_image" data-background="/static/assets/images/overview/overview-bg.png"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= Overview Section Ends Here =============-->
+
+
+    <!--============= Call In Section Starts Here =============-->
+    <section class="call-in-section padding-top padding-bottom">
+        <div class="container">
+            <div class="call-wrapper cl-white bg_img" data-background="/static/assets/images/call-in/call-bg.png">
+                <div class="section-header">
+                    <h3 class="title">ثبت نام رایگان و شروع پیشنهادات اکنون!</h3>
+                    <p>هیجان شرکت در مزایده و حراجی را تجربه کنید!</p>
+                </div>
+                <a href="{% url 'sign-up-page' %}" class="custom-button white">ثبت نام</a>
+            </div>
+        </div>
+    </section>
+    <!--============= Call In Section Ends Here =============-->
+
+
+    <!--============= Team Section Starts Here =============-->
+    <section class="team-section section-bg padding-top padding-bottom">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="title">با تیم ما بیشتر آشنا شوید</h2>
+                <p>تیم ما متشکل از افراد پرشور و با استعدادی است که هدف اصلی مان رضایت مشتری می باشد.</p>
+            </div>
+            <div class="team-wrapper row justify-content-between">
+                <div class="team-item">
+                    <div class="team-inner">
+                        <div class="team-thumb">
+                            <a href="#0">
+                                <img src="/static/assets/images/team/man_icon.png" alt="team">
+                            </a>
+                        </div>
+                        <div class="team-content">
+                            <h6 class="title"><a>سیدمحمد سیدحسینی</a></h6>
+                            <ul class="social">
+                                <li>
+                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#0"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#0"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="team-inner">
+                        <div class="team-thumb">
+                            <a href="#0">
+                                <img src="/static/assets/images/team/woman_icon1.png" alt="team">
+                            </a>
+                        </div>
+                        <div class="team-content">
+                            <h6 class="title"><a>تارا روانلو</a></h6>
+                            <ul class="social">
+                                <li>
+                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#0"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#0"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-item">
+                    <div class="team-inner">
+                        <div class="team-thumb">
+                            <a href="#0">
+                                <img src="/static/assets/images/team/woman_icon2.png" alt="team">
+                            </a>
+                        </div>
+                        <div class="team-content">
+                            <h6 class="title"><a>ثمین ساعی</a></h6>
+                            <ul class="social">
+                                <li>
+                                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#0"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#0"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= Team Section Ends Here =============-->
+
+
+    <!--============= Client Section Starts Here =============-->
+    <section class="client-section padding-top padding-bottom">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="title">فقط حرف ما را قبول کنید!</h2>
+                <p>سخت کوشی ما نتیجه دارد. نظرات عالی مشتریان شگفت انگیز</p>
+            </div>
+            <div class="m--15">
+                <div class="client-slider owl-theme owl-carousel">
+                    <div class="client-item">
+                        <div class="client-content">
+                            <p>آنچه را که برنده شده ام دوست داشته باشم و سعی خواهم کرد چیز دیگری را بدست آورم.</p>
+                        </div>
+                        <div class="client-author">
+                            <div class="thumb">
+                                <a href="#0">
+                                    <img src="/static/assets/images/client/client01.png" alt="client">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h6 class="title"><a href="#0">تام پاول</a></h6>
+                                <div class="ratings">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-item">
+                        <div class="client-content">
+                            <p>آنچه را که برنده شده ام دوست داشته باشم و سعی خواهم کرد چیز دیگری را بدست آورم.</p>
+                        </div>
+                        <div class="client-author">
+                            <div class="thumb">
+                                <a href="#0">
+                                    <img src="/static/assets/images/client/client02.png" alt="client">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h6 class="title"><a href="#0">تام پاول</a></h6>
+                                <div class="ratings">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-item">
+                        <div class="client-content">
+                            <p>آنچه را که برنده شده ام دوست داشته باشم و سعی خواهم کرد چیز دیگری را بدست آورم.</p>
+                        </div>
+                        <div class="client-author">
+                            <div class="thumb">
+                                <a href="#0">
+                                    <img src="/static/assets/images/client/client03.png" alt="client">
+                                </a>
+                            </div>
+                            <div class="content">
+                                <h6 class="title"><a href="#0">تام پاول</a></h6>
+                                <div class="ratings">
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                    <span><i class="fas fa-star"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= Client Section Ends Here =============-->
+
+    {% include 'footer_component.html' %}
+
+</body>
+
+</html>

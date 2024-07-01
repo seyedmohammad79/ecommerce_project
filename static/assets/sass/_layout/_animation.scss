@@ -1,0 +1,41 @@
+@keyframes plus-anime {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(1440deg))
+    }
+}
+.plus-anime {
+    animation: plus-anime 18s linear infinite;
+    -webkit-animation: plus-anime 18s linear infinite;
+    -moz-animation: plus-anime 18s linear infinite;
+}
+.zigzag {
+    animation: zigzag 10s alternate infinite;
+    -webkit-animation: zigzag 10s alternate infinite;
+    -moz-animation: zigzag 10s alternate infinite;
+    &:nth-child(odd) {
+        animation-delay: 3s;
+        -webkit-animation-delay: 3s;
+        -moz-animation-delay: 3s;
+    }
+}
+@keyframes zigzag {
+    0% {
+        @include transform(translate(-10px, -10px));
+    }
+    25% {
+        @include transform(translate(10px, -10px));
+    }
+    50% {
+        @include transform(translate(-10px, 10px));
+    }
+    75% {
+        @include transform(translate(10px, 10px));
+    }
+    75% {
+        @include transform(translate(-10px, -10px));
+    }
+}
+/*All Animation Ends Here*/

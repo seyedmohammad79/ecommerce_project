@@ -1,0 +1,993 @@
+
+<!DOCTYPE html>
+{% load poll_extras %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>دِد بازار - اولین سایت مزایده</title>
+
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/all.min.css">
+    <link rel="stylesheet" href="/static/assets/css/animate.css">
+    <link rel="stylesheet" href="/static/assets/css/nice-select.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.min.css">
+    <link rel="stylesheet" href="/static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/static/assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+
+    <link rel="shortcut icon" href="/static/assets/images/favicon2.png" type="image/x-icon">
+</head>
+
+<body>
+
+{% include 'header_component.html' %}
+
+<!--============= Banner Section Starts Here =============-->
+<section class="banner-section-2 bg_img" data-background="/static/assets/images/banner/banner-bg-3.png">
+    <div class="container">
+        <div class="row align-items-center justify-content-between align-items-center">
+            <div class="col-md-10 col-lg-6 col-xl-6">
+                <div class="banner-content cl-white">
+                    <h5 class="cate">از مزایده لذت ببرید</h5>
+                    <h1 class="title"><span class="d-xl-block">معامله داغ</span> برای شما</h1>
+                    <p>
+                        ما دائما در حال معرفی بازارهای حراجی هستیم ، در حراجی ها و مزایده ها قیمت مدنظر خود را پیشنهاد دهید و کالای خود را خریداری کنید.
+                    </p>
+                    <a href="{% url 'create_product_page' %}" class="custom-button yellow btn-large">ایجاد محصول</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-lg-6 col-xl-6 d-none d-lg-block">
+                <div class="banner-thumb-3">
+                    <img src="/static/assets/images/banner/banner-3.png" alt="banner">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="banner-shape-2 d-none d-lg-block">
+        <img src="/static/assets/css/img/banner-shape-3.png" alt="css">
+    </div>
+</section>
+<!--============= Banner Section Ends Here =============-->
+
+
+<!--============= Hightlight Slider Section Starts Here =============-->
+<div class="browse-slider-section mt--140">
+    <div class="container">
+        <div class="section-header-2 mb-4">
+            <div class="left">
+                <h6 class="title cl-white cl-lg-black pl-0">موارد برجسته را مرور کنید</h6>
+            </div>
+            <div class="slider-nav">
+                <a href="#0" class="bro-prev"><i class="flaticon-right-arrow"></i></a>
+                <a href="#0" class="bro-next active"><i class="flaticon-left-arrow"></i></a>
+            </div>
+        </div>
+        <div class="m--15">
+            <div class="browse-slider owl-theme owl-carousel">
+                <a href="#0" class="browse-item">
+                    <img src="/static/assets/images/auction/01.png" alt="auction">
+                    <span class="info">خودرو</span>
+                </a>
+                <a href="#0" class="browse-item">
+                    <img src="/static/assets/images/auction/02.png" alt="auction">
+                    <span class="info">جواهر سازی</span>
+                </a>
+                <a href="#0" class="browse-item">
+                    <img src="/static/assets/images/auction/03.png" alt="auction">
+                    <span class="info">ساعت</span>
+                </a>
+                <a href="#0" class="browse-item">
+                    <img src="/static/assets/images/auction/04.png" alt="auction">
+                    <span class="info">الکترونیک</span>
+                </a>
+                <a href="#0" class="browse-item">
+                    <img src="/static/assets/images/auction/05.png" alt="auction">
+                    <span class="info">ورزش ها</span>
+                </a>
+                <a href="#0" class="browse-item">
+                    <img src="/static/assets/images/auction/06.png" alt="auction">
+                    <span class="info">مشاور املاک</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--============= Hightlight Slider Section Ends Here =============-->
+
+
+<!--============= Feture Auction Section Starts Here =============-->
+<section class="feature-auction-section padding-bottom padding-top bg_img" data-background="/static/assets/images/auction/featured/featured-bg-1.jpg">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="title">موارد برجسته</h2>
+            <p>پیشنهادات و برنده معاملات عالی ، روند حراج ما ساده ، کارآمد و شفاف است.</p>
+        </div>
+        <div class="row justify-content-center mb-30-none">
+            {% for product in products %}
+                <div class="col-sm-10 col-md-6 col-lg-4">
+                <div class="auction-item-2">
+                    <div class="auction-thumb">
+                        <a href="{% url 'product_detail_page' product_id=product.id %}"><img src="{{ product.Image.url }}" alt="jewelry"></a>
+                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
+                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>
+                    </div>
+                    <div class="auction-content">
+                        <h6 class="title">
+                            <a href="{% url 'product_detail_page' product_id=product.id %}">{{ product.title }}</a>
+                        </h6>
+                        <div class="bid-area">
+                            <div class="bid-amount">
+                                <div class="icon">
+                                    <i class="flaticon-auction"></i>
+                                </div>
+                                <div class="amount-content">
+                                    <div class="current">پیشنهاد فعلی</div>
+                                    <div class="amount">{% if product.auctionproduct_set.all %}{{ product.find_max_suggest.price | three_digits_currency }}{% else %}{{ product.start_price | three_digits_currency }}{% endif %}</div>
+                                </div>
+                            </div>
+                            <div class="bid-amount">
+                                <div class="icon">
+                                    <i class="flaticon-money"></i>
+                                </div>
+                                <div class="amount-content">
+                                    <div class="current">خریدکنید</div>
+                                    <div class="amount">{{ product.end_price | three_digits_currency }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="countdown-area">
+                            <div class="countdown">
+                                <div>پایان مناقصه:{{ product.get_jalali_date }}</div>
+                            </div>
+                            <span class="total-bids">{{ product.suggest_count }} پیشنهاد</span>
+                        </div>
+                        <div class="text-center">
+                            <a href="{% url 'product_detail_page' product_id=product.id %}" class="custom-button">پیشنهاد دهید</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+{#            <div class="col-sm-10 col-md-6 col-lg-4">#}
+{#                <div class="auction-item-2">#}
+{#                    <div class="auction-thumb">#}
+{#                        <a href="./product-details.html"><img src="/static/assets/images/auction/jewelry/auction-2.jpg" alt="jewelry"></a>#}
+{#                        <a href="#0" class="rating"><i class="far fa-star"></i></a>#}
+{#                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>#}
+{#                    </div>#}
+{#                    <div class="auction-content">#}
+{#                        <h6 class="title">#}
+{#                            <a href="./product-details.html">انگشتر طلا با سنگ های پاک</a>#}
+{#                        </h6>#}
+{#                        <div class="bid-area">#}
+{#                            <div class="bid-amount">#}
+{#                                <div class="icon">#}
+{#                                    <i class="flaticon-auction"></i>#}
+{#                                </div>#}
+{#                                <div class="amount-content">#}
+{#                                    <div class="current">پیشنهاد فعلی</div>#}
+{#                                    <div class="amount">800.000 تومان</div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="bid-amount">#}
+{#                                <div class="icon">#}
+{#                                    <i class="flaticon-money"></i>#}
+{#                                </div>#}
+{#                                <div class="amount-content">#}
+{#                                    <div class="current">خریدکنید</div>#}
+{#                                    <div class="amount">500.000 تومان</div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="countdown-area">#}
+{#                            <div class="countdown">#}
+{#                                <div id="bid_counter24"></div>#}
+{#                            </div>#}
+{#                            <span class="total-bids">30 پیشنهاد</span>#}
+{#                        </div>#}
+{#                        <div class="text-center">#}
+{#                            <a href="#0" class="custom-button">پیشنهاد دهید</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="col-sm-10 col-md-6 col-lg-4">#}
+{#                <div class="auction-item-2">#}
+{#                    <div class="auction-thumb">#}
+{#                        <a href="./product-details.html"><img src="/static/assets/images/auction/watches/auction-2.jpg" alt="jewelry"></a>#}
+{#                        <a href="#0" class="rating"><i class="far fa-star"></i></a>#}
+{#                        <a href="#0" class="bid"><i class="flaticon-auction"></i></a>#}
+{#                    </div>#}
+{#                    <div class="auction-content">#}
+{#                        <h6 class="title">#}
+{#                            <a href="./product-details.html">رولکس</a>#}
+{#                        </h6>#}
+{#                        <div class="bid-area">#}
+{#                            <div class="bid-amount">#}
+{#                                <div class="icon">#}
+{#                                    <i class="flaticon-auction"></i>#}
+{#                                </div>#}
+{#                                <div class="amount-content">#}
+{#                                    <div class="current">پیشنهاد فعلی</div>#}
+{#                                    <div class="amount">800.000 تومان</div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="bid-amount">#}
+{#                                <div class="icon">#}
+{#                                    <i class="flaticon-money"></i>#}
+{#                                </div>#}
+{#                                <div class="amount-content">#}
+{#                                    <div class="current">خریدکنید</div>#}
+{#                                    <div class="amount">500.000 تومان</div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="countdown-area">#}
+{#                            <div class="countdown">#}
+{#                                <div id="bid_counter25"></div>#}
+{#                            </div>#}
+{#                            <span class="total-bids">30 پیشنهاد</span>#}
+{#                        </div>#}
+{#                        <div class="text-center">#}
+{#                            <a href="#0" class="custom-button">پیشنهاد دهید</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+        </div>
+        <div class="load-wrapper">
+            <a href="#0" class="normal-button">مشاهده همه حراج</a>
+        </div>
+    </div>
+</section>
+<!--============= Feture Auction Section Ends Here =============-->
+
+
+<!--============= Upcoming Auction Section Starts Here =============-->
+<section class="upcoming-auction padding-bottom">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="title">حراجهای آتی</h2>
+            <p>شما می توانید در هر یک از حراجی های آینده ما شرکت کرده و در عمل شرکت کنید.</p>
+        </div>
+    </div>
+    <div class="filter-wrapper">
+        <div class="container">
+            <ul class="filter">
+                <li class="active" data-check="*">
+                    <span><i class="flaticon-left-arrow"></i>همه</span>
+                </li>
+                <li data-check=".time">
+                    <span><i class="flaticon-time"></i>زمان حراج</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <div class="auction-wrapper-5 m--15">
+            {% for product in products %}
+                <div class="auction-item-5 time">
+                <div class="auction-inner">
+                    <div class="upcoming-badge" title="Upcoming Auction">
+                        <i class="flaticon-auction"></i>
+                    </div>
+                    <div class="auction-thumb">
+                        <a href="{% url 'product_detail_page' product_id=product.id %}"><img src="{{ product.Image.url }}" alt="upcoming"></a>
+                        <a href="#0" class="rating"><i class="far fa-star"></i></a>
+                    </div>
+                    <div class="auction-content">
+                        <div class="title-area">
+                            <h6 class="title">
+                                <a href="{% url 'product_detail_page' product_id=product.id %}">{{ product.title }}</a>
+                            </h6>
+                            <div class="list-area">
+                                    <span class="list-item">
+                                        <span class="list-id">شناسه</span>{{ product.id }}
+                                    </span>
+                                <span class="list-item">
+                                        <span class="list-id">مورد#</span>0900-027867
+                                    </span>
+                            </div>
+                        </div>
+                        <div class="bid-area">
+                            <div class="bid-inner">
+                                <div class="bid-amount">
+                                    <div class="icon">
+                                        <i class="flaticon-auction"></i>
+                                    </div>
+                                    <div class="amount-content">
+                                        <div class="current">پیشنهاد فعلی</div>
+                                        <div class="amount">{% if product.auctionproduct_set.all %}{{ product.find_max_suggest.price | three_digits_currency }}{% else %}{{ product.start_price | three_digits_currency }}{% endif %}</div>
+                                    </div>
+                                </div>
+                                <div class="bid-amount">
+                                    <div class="icon">
+                                        <i class="flaticon-money"></i>
+                                    </div>
+                                    <div class="amount-content">
+                                        <div class="current">خریدکنید</div>
+                                        <div class="amount">{{ product.end_price | three_digits_currency }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bid-count-area">
+                                <span class="item">
+                                    <span class="left">کل پیشنهاد</span>{{ product.suggest_count }} پیشنهاد
+                                </span>
+                            <span class="item">
+                                    <span class="left">آخرین پیشنهاد</span>{% if product.auctionproduct_set.all %}{{ product.find_max_suggest.get_jalali_date }}{% else %} - {% endif %}
+                                </span>
+                        </div>
+                    </div>
+                    <div class="auction-bidding">
+                        <span class="bid-title">پایان مناقصه:</span>
+                        <div class="countdown">
+                            <div>{{ product.get_jalali_date }}</div>
+                        </div>
+                        <a href="{% url 'product_detail_page' product_id=product.id %}" class="custom-button">پیشنهاد دهید</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+{#            <div class="auction-item-5 live">#}
+{#                <div class="auction-inner">#}
+{#                    <div class="upcoming-badge" title="Upcoming Auction">#}
+{#                        <i class="flaticon-auction"></i>#}
+{#                    </div>#}
+{#                    <div class="auction-thumb">#}
+{#                        <a href="./product-details.html"><img src="/static/assets/images/auction/upcoming/upcoming-2.png" alt="upcoming"></a>#}
+{#                        <a href="#0" class="rating"><i class="far fa-star"></i></a>#}
+{#                    </div>#}
+{#                    <div class="auction-content">#}
+{#                        <div class="title-area">#}
+{#                            <h6 class="title">#}
+{#                                <a href="./product-details.html">لپ تاپ</a>#}
+{#                            </h6>#}
+{#                            <div class="list-area">#}
+{#                                    <span class="list-item">#}
+{#                                        <span class="list-id">شناسه</span>14033488#}
+{#                                    </span>#}
+{#                                <span class="list-item">#}
+{#                                        <span class="list-id">مورد#</span>0900-027867#}
+{#                                    </span>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-area">#}
+{#                            <div class="bid-inner">#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-auction"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">پیشنهاد فعلی</div>#}
+{#                                        <div class="amount">800.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-money"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">خریدکنید</div>#}
+{#                                        <div class="amount">500.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-count-area">#}
+{#                                <span class="item">#}
+{#                                    <span class="left">کل پیشنهاد</span>97 پیشنهاد#}
+{#                                </span>#}
+{#                            <span class="item">#}
+{#                                    <span class="left">آخرین پیشنهاد</span>7 دقیقه قبل#}
+{#                                </span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="auction-bidding">#}
+{#                        <span class="bid-title">مناقصه در پایان می یابد</span>#}
+{#                        <div class="countdown">#}
+{#                            <div id="bid_counter4"></div>#}
+{#                        </div>#}
+{#                        <div class="bid-incr">#}
+{#                            <span class="title">افزایش قیمت</span>#}
+{#                            <h4>3 تومان</h4>#}
+{#                        </div>#}
+{#                        <a href="#0" class="custom-button">پیشنهاد دهید</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="auction-item-5 buy">#}
+{#                <div class="auction-inner">#}
+{#                    <div class="upcoming-badge" title="Upcoming Auction">#}
+{#                        <i class="flaticon-auction"></i>#}
+{#                    </div>#}
+{#                    <div class="auction-thumb">#}
+{#                        <a href="./product-details.html"><img src="/static/assets/images/auction/upcoming/upcoming-3.png" alt="upcoming"></a>#}
+{#                        <a href="#0" class="rating"><i class="far fa-star"></i></a>#}
+{#                    </div>#}
+{#                    <div class="auction-content">#}
+{#                        <div class="title-area">#}
+{#                            <h6 class="title">#}
+{#                                <a href="./product-details.html">لپ تاپ</a>#}
+{#                            </h6>#}
+{#                            <div class="list-area">#}
+{#                                    <span class="list-item">#}
+{#                                        <span class="list-id">شناسه</span>14033488#}
+{#                                    </span>#}
+{#                                <span class="list-item">#}
+{#                                        <span class="list-id">مورد#</span>0900-027867#}
+{#                                    </span>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-area">#}
+{#                            <div class="bid-inner">#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-auction"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">پیشنهاد فعلی</div>#}
+{#                                        <div class="amount">800.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-money"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">خریدکنید</div>#}
+{#                                        <div class="amount">500.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-count-area">#}
+{#                                <span class="item">#}
+{#                                    <span class="left">کل پیشنهاد</span>97 پیشنهاد#}
+{#                                </span>#}
+{#                            <span class="item">#}
+{#                                    <span class="left">آخرین پیشنهاد</span>7 دقیقه قبل#}
+{#                                </span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="auction-bidding">#}
+{#                        <span class="bid-title">مناقصه در پایان می یابد</span>#}
+{#                        <div class="countdown">#}
+{#                            <div id="bid_counter5"></div>#}
+{#                        </div>#}
+{#                        <div class="bid-incr">#}
+{#                            <span class="title">افزایش قیمت</span>#}
+{#                            <h4>3 تومان</h4>#}
+{#                        </div>#}
+{#                        <a href="#0" class="custom-button">پیشنهاد دهید</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="auction-item-5 time">#}
+{#                <div class="auction-inner">#}
+{#                    <div class="upcoming-badge" title="Upcoming Auction">#}
+{#                        <i class="flaticon-auction"></i>#}
+{#                    </div>#}
+{#                    <div class="auction-thumb">#}
+{#                        <a href="./product-details.html"><img src="/static/assets/images/auction/upcoming/upcoming-4.png" alt="upcoming"></a>#}
+{#                        <a href="#0" class="rating"><i class="far fa-star"></i></a>#}
+{#                    </div>#}
+{#                    <div class="auction-content">#}
+{#                        <div class="title-area">#}
+{#                            <h6 class="title">#}
+{#                                <a href="./product-details.html">دوربین</a>#}
+{#                            </h6>#}
+{#                            <div class="list-area">#}
+{#                                    <span class="list-item">#}
+{#                                        <span class="list-id">شناسه</span>14033488#}
+{#                                    </span>#}
+{#                                <span class="list-item">#}
+{#                                        <span class="list-id">مورد#</span>0900-027867#}
+{#                                    </span>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-area">#}
+{#                            <div class="bid-inner">#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-auction"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">پیشنهاد فعلی</div>#}
+{#                                        <div class="amount">800.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-money"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">خریدکنید</div>#}
+{#                                        <div class="amount">500.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-count-area">#}
+{#                                <span class="item">#}
+{#                                    <span class="left">کل پیشنهاد</span>97 پیشنهاد#}
+{#                                </span>#}
+{#                            <span class="item">#}
+{#                                    <span class="left">آخرین پیشنهاد</span>7 دقیقه قبل#}
+{#                                </span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="auction-bidding">#}
+{#                        <span class="bid-title">مناقصه در پایان می یابد</span>#}
+{#                        <div class="countdown">#}
+{#                            <div id="bid_counter6"></div>#}
+{#                        </div>#}
+{#                        <div class="bid-incr">#}
+{#                            <span class="title">افزایش قیمت</span>#}
+{#                            <h4>3 تومان</h4>#}
+{#                        </div>#}
+{#                        <a href="#0" class="custom-button">پیشنهاد دهید</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="auction-item-5 buy">#}
+{#                <div class="auction-inner">#}
+{#                    <div class="upcoming-badge" title="Upcoming Auction">#}
+{#                        <i class="flaticon-auction"></i>#}
+{#                    </div>#}
+{#                    <div class="auction-thumb">#}
+{#                        <a href="./product-details.html"><img src="/static/assets/images/auction/upcoming/upcoming-5.png" alt="upcoming"></a>#}
+{#                        <a href="#0" class="rating"><i class="far fa-star"></i></a>#}
+{#                    </div>#}
+{#                    <div class="auction-content">#}
+{#                        <div class="title-area">#}
+{#                            <h6 class="title">#}
+{#                                <a href="./product-details.html">دوربین</a>#}
+{#                            </h6>#}
+{#                            <div class="list-area">#}
+{#                                    <span class="list-item">#}
+{#                                        <span class="list-id">شناسه</span>14033488#}
+{#                                    </span>#}
+{#                                <span class="list-item">#}
+{#                                        <span class="list-id">مورد#</span>0900-027867#}
+{#                                    </span>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-area">#}
+{#                            <div class="bid-inner">#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-auction"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">پیشنهاد فعلی</div>#}
+{#                                        <div class="amount">800.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-money"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">خریدکنید</div>#}
+{#                                        <div class="amount">500.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-count-area">#}
+{#                                <span class="item">#}
+{#                                    <span class="left">کل پیشنهاد</span>97 پیشنهاد#}
+{#                                </span>#}
+{#                            <span class="item">#}
+{#                                    <span class="left">آخرین پیشنهاد</span>7 دقیقه قبل#}
+{#                                </span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="auction-bidding">#}
+{#                        <span class="bid-title">مناقصه در پایان می یابد</span>#}
+{#                        <div class="countdown">#}
+{#                            <div id="bid_counter7"></div>#}
+{#                        </div>#}
+{#                        <div class="bid-incr">#}
+{#                            <span class="title">افزایش قیمت</span>#}
+{#                            <h4>3 تومان</h4>#}
+{#                        </div>#}
+{#                        <a href="#0" class="custom-button">پیشنهاد دهید</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="auction-item-5 live">#}
+{#                <div class="auction-inner">#}
+{#                    <div class="upcoming-badge" title="Upcoming Auction">#}
+{#                        <i class="flaticon-auction"></i>#}
+{#                    </div>#}
+{#                    <div class="auction-thumb">#}
+{#                        <a href="./product-details.html"><img src="/static/assets/images/auction/upcoming/upcoming-6.png" alt="upcoming"></a>#}
+{#                        <a href="#0" class="rating"><i class="far fa-star"></i></a>#}
+{#                    </div>#}
+{#                    <div class="auction-content">#}
+{#                        <div class="title-area">#}
+{#                            <h6 class="title">#}
+{#                                <a href="./product-details.html">لپ تاپ</a>#}
+{#                            </h6>#}
+{#                            <div class="list-area">#}
+{#                                    <span class="list-item">#}
+{#                                        <span class="list-id">شناسه</span>14033488#}
+{#                                    </span>#}
+{#                                <span class="list-item">#}
+{#                                        <span class="list-id">مورد#</span>0900-027867#}
+{#                                    </span>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-area">#}
+{#                            <div class="bid-inner">#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-auction"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">پیشنهاد فعلی</div>#}
+{#                                        <div class="amount">800.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-money"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">خریدکنید</div>#}
+{#                                        <div class="amount">500.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-count-area">#}
+{#                                <span class="item">#}
+{#                                    <span class="left">کل پیشنهاد</span>97 پیشنهاد#}
+{#                                </span>#}
+{#                            <span class="item">#}
+{#                                    <span class="left">آخرین پیشنهاد</span>7 دقیقه قبل#}
+{#                                </span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="auction-bidding">#}
+{#                        <span class="bid-title">مناقصه در پایان می یابد</span>#}
+{#                        <div class="countdown">#}
+{#                            <div id="bid_counter8"></div>#}
+{#                        </div>#}
+{#                        <div class="bid-incr">#}
+{#                            <span class="title">افزایش قیمت</span>#}
+{#                            <h4>3 تومان</h4>#}
+{#                        </div>#}
+{#                        <a href="#0" class="custom-button">پیشنهاد دهید</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="auction-item-5 time">#}
+{#                <div class="auction-inner">#}
+{#                    <div class="upcoming-badge" title="Upcoming Auction">#}
+{#                        <i class="flaticon-auction"></i>#}
+{#                    </div>#}
+{#                    <div class="auction-thumb">#}
+{#                        <a href="./product-details.html"><img src="/static/assets/images/auction/upcoming/upcoming-7.png" alt="upcoming"></a>#}
+{#                        <a href="#0" class="rating"><i class="far fa-star"></i></a>#}
+{#                    </div>#}
+{#                    <div class="auction-content">#}
+{#                        <div class="title-area">#}
+{#                            <h6 class="title">#}
+{#                                <a href="./product-details.html">لپ تاپ</a>#}
+{#                            </h6>#}
+{#                            <div class="list-area">#}
+{#                                    <span class="list-item">#}
+{#                                        <span class="list-id">شناسه</span>14033488#}
+{#                                    </span>#}
+{#                                <span class="list-item">#}
+{#                                        <span class="list-id">مورد#</span>0900-027867#}
+{#                                    </span>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-area">#}
+{#                            <div class="bid-inner">#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-auction"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">پیشنهاد فعلی</div>#}
+{#                                        <div class="amount">800.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-money"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">خریدکنید</div>#}
+{#                                        <div class="amount">500.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-count-area">#}
+{#                                <span class="item">#}
+{#                                    <span class="left">کل پیشنهاد</span>97 پیشنهاد#}
+{#                                </span>#}
+{#                            <span class="item">#}
+{#                                    <span class="left">آخرین پیشنهاد</span>7 دقیقه قبل#}
+{#                                </span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="auction-bidding">#}
+{#                        <span class="bid-title">مناقصه در پایان می یابد</span>#}
+{#                        <div class="countdown">#}
+{#                            <div id="bid_counter9"></div>#}
+{#                        </div>#}
+{#                        <div class="bid-incr">#}
+{#                            <span class="title">افزایش قیمت</span>#}
+{#                            <h4>3 تومان</h4>#}
+{#                        </div>#}
+{#                        <a href="#0" class="custom-button">پیشنهاد دهید</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="auction-item-5 live">#}
+{#                <div class="auction-inner">#}
+{#                    <div class="upcoming-badge" title="Upcoming Auction">#}
+{#                        <i class="flaticon-auction"></i>#}
+{#                    </div>#}
+{#                    <div class="auction-thumb">#}
+{#                        <a href="./product-details.html"><img src="/static/assets/images/auction/upcoming/upcoming-8.png" alt="upcoming"></a>#}
+{#                        <a href="#0" class="rating"><i class="far fa-star"></i></a>#}
+{#                    </div>#}
+{#                    <div class="auction-content">#}
+{#                        <div class="title-area">#}
+{#                            <h6 class="title">#}
+{#                                <a href="./product-details.html">لپ تاپ</a>#}
+{#                            </h6>#}
+{#                            <div class="list-area">#}
+{#                                    <span class="list-item">#}
+{#                                        <span class="list-id">شناسه</span>14033488#}
+{#                                    </span>#}
+{#                                <span class="list-item">#}
+{#                                        <span class="list-id">مورد#</span>0900-027867#}
+{#                                    </span>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-area">#}
+{#                            <div class="bid-inner">#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-auction"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">پیشنهاد فعلی</div>#}
+{#                                        <div class="amount">800.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="bid-amount">#}
+{#                                    <div class="icon">#}
+{#                                        <i class="flaticon-money"></i>#}
+{#                                    </div>#}
+{#                                    <div class="amount-content">#}
+{#                                        <div class="current">خریدکنید</div>#}
+{#                                        <div class="amount">500.000 تومان</div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="bid-count-area">#}
+{#                                <span class="item">#}
+{#                                    <span class="left">کل پیشنهاد</span>97 پیشنهاد#}
+{#                                </span>#}
+{#                            <span class="item">#}
+{#                                    <span class="left">آخرین پیشنهاد</span>7 دقیقه قبل#}
+{#                                </span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="auction-bidding">#}
+{#                        <span class="bid-title">مناقصه در پایان می یابد</span>#}
+{#                        <div class="countdown">#}
+{#                            <div id="bid_counter10"></div>#}
+{#                        </div>#}
+{#                        <div class="bid-incr">#}
+{#                            <span class="title">افزایش قیمت</span>#}
+{#                            <h4>3 تومان</h4>#}
+{#                        </div>#}
+{#                        <a href="#0" class="custom-button">پیشنهاد دهید</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+        </div>
+    </div>
+</section>
+<!--============= Upcoming Auction Section Ends Here =============-->
+
+
+<!--============= How Section Starts Here =============-->
+<section class="how-video-section pos-rel">
+    <div class="popular-bg bg_img" data-background="/static/assets/images/auction/popular/popular-bg2.png"></div>
+    <div class="how-video-shape bg_img d-none d-md-block" data-background="/static/assets/css/img/how-video.png"></div>
+    <div class="container">
+        <div class="how-video-wrapper">
+            <div class="how-video-area">
+                <a href="" class="popup">
+                    <h5 class="title">فیلم های ما را تماشا کنید</h5>
+                    <div class="video-button">
+                        <i class="flaticon-right-arrow-1"></i>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="how-wrapper section-bg shadow-style">
+            <div class="section-header text-lg-right">
+                <h2 class="title">چگونه کار می کند</h2>
+                <p> 3 مرحله برای برنده شدن</p>
+            </div>
+            <div class="row justify-content-center mb--40">
+                <div class="col-md-6 col-lg-4">
+                    <div class="how-item">
+                        <div class="how-thumb">
+                            <img src="/static/assets/images/how/how1.png" alt="how">
+                        </div>
+                        <div class="how-content">
+                            <h4 class="title">ثبت نام</h4>
+                            <p>بدون کارت اعتباری مورد نیاز است</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="how-item">
+                        <div class="how-thumb">
+                            <img src="/static/assets/images/how/how2.png" alt="how">
+                        </div>
+                        <div class="how-content">
+                            <h4 class="title">پیشنهاد</h4>
+                            <p>پیشنهادات رایگان است فقط در صورت برنده شدن پرداخت کنید</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="how-item">
+                        <div class="how-thumb">
+                            <img src="/static/assets/images/how/how3.png" alt="how">
+                        </div>
+                        <div class="how-content">
+                            <h4 class="title">پیروزی</h4>
+                            <p>سرگرم کننده - هیجان - معاملات عالی</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--============= How Section Ends Here =============-->
+
+
+<!--============= Call In Section Starts Here =============-->
+<section class="call-in-section padding-top">
+    <div class="container">
+        <div class="call-wrapper cl-white bg_img" data-background="/static/assets/images/call-in/call-bg.png">
+            <div class="section-header">
+                <h3 class="title">ثبت نام رایگان و شروع پیشنهادات اکنون!</h3>
+                <p>از ماشین گرفته تا الماس گرفته تا آیفون ، همه آن را داریم.</p>
+            </div>
+            <a href="sign-up.html" class="custom-button white">ثبت نام</a>
+        </div>
+    </div>
+</section>
+<!--============= Call In Section Ends Here =============-->
+
+
+<!--============= Client Section Starts Here =============-->
+<section class="client-section padding-top padding-bottom">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="title">فقط حرف ما را قبول کنید!</h2>
+            <p>سخت کوشی ما نتیجه دارد. نظرات عالی مشتریان شگفت انگیز</p>
+        </div>
+        <div class="m--15">
+            <div class="client-slider owl-theme owl-carousel">
+                <div class="client-item">
+                    <div class="client-content">
+                        <p>آنچه را که برنده شده ام دوست داشته باشم و سعی خواهم کرد چیز دیگری را بدست آورم.</p>
+                    </div>
+                    <div class="client-author">
+                        <div class="thumb">
+                            <a href="#0">
+                                <img src="/static/assets/images/client/client01.png" alt="client">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h6 class="title"><a href="#0">تام پاول</a></h6>
+                            <div class="ratings">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="client-item">
+                    <div class="client-content">
+                        <p>آنچه را که برنده شده ام دوست داشته باشم و سعی خواهم کرد چیز دیگری را بدست آورم.</p>
+                    </div>
+                    <div class="client-author">
+                        <div class="thumb">
+                            <a href="#0">
+                                <img src="/static/assets/images/client/client02.png" alt="client">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h6 class="title"><a href="#0">تام پاول</a></h6>
+                            <div class="ratings">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="client-item">
+                    <div class="client-content">
+                        <p>آنچه را که برنده شده ام دوست داشته باشم و سعی خواهم کرد چیز دیگری را بدست آورم.</p>
+                    </div>
+                    <div class="client-author">
+                        <div class="thumb">
+                            <a href="#0">
+                                <img src="/static/assets/images/client/client03.png" alt="client">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <h6 class="title"><a href="#0">تام پاول</a></h6>
+                            <div class="ratings">
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                                <span><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--============= Client Section Ends Here =============-->
+
+{% include 'footer_component.html' %}
+{% if status %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+Swal.fire({
+  title: 'اعلان',
+  text: '{{ text }}',
+  icon: '{{ icon }}',
+    width: 500,
+  showCancelButton: false,
+  confirmButtonColor: "#3085d6",
+  confirmButtonText: '{{ confirmButtonText }}',
+    timer: 10000
+})
+</script>
+{% endif %}
+
+</body>
+
+</html>

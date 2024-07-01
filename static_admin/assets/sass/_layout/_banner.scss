@@ -1,0 +1,424 @@
+/*Banner Section One Starts Here*/
+.banner-section {
+    position: relative;
+    padding: 220px 0 240px;
+    overflow: hidden;
+    @include breakpoint(lg) {
+        padding: 270px 0 270px;
+    }
+    @include breakpoint(xl) {
+        padding: 280px 0 280px;
+    }
+}
+.banner-content {
+    position: relative;
+    z-index: 2;
+    .title {
+        font-size: 76px;
+        line-height: 86px;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 22px;
+        line-height: 34px;
+        margin: 0;
+        margin-bottom: 33px;
+    }
+    .custom-button {
+        letter-spacing: 2px;
+    }
+    @include breakpoint(md) {
+        margin-bottom: 25px;
+    }
+    @include breakpoint(max-xl) {
+        .title {
+            font-size: 60px;
+            line-height: 70px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 35px;
+        }
+    }
+    @include breakpoint(max-md) {
+        p {
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 32px;
+        }
+    }
+    @include breakpoint(max-sm) {
+        .title {
+            font-size: 42px;
+            line-height: 50px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 26px;
+            margin-bottom: 25px;
+        }
+    }
+    @include breakpoint(xl) {
+        .title {
+            font-size: 80px;
+            line-height: 90px;
+        }
+    }
+    .cate {
+        margin-bottom: 15px;
+        color: $theme-five;
+        @include breakpoint(max-md) {
+            margin-bottom: 10px;
+        }
+    }
+}
+.banner-shape, .banner-shape-2 {
+    position: absolute;
+    content: "";
+    left: 50%;
+    bottom: -5px;
+    @include transform(translateX(-50%));
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+/*Banner Section Two Starts Here*/
+.banner-section-2 {
+    position: relative;
+    overflow: hidden;
+    padding: 220px 0 240px;
+    @include breakpoint(lg) {
+        padding: 200px 0 240px;
+    }
+    @include breakpoint(xl) {
+        padding: 220px 0 270px;
+    }
+}
+.banner-shape-2 {
+    bottom: -100px;
+    min-width: 1800px;
+}
+.banner-thumb {
+    position: relative;
+    z-index: 1;
+    img {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-45%));
+        left: 0;
+        @include breakpoint(max-xl) {
+            max-width: 580px;
+        }
+    }
+}
+.banner-thumb-2 {
+    position: relative;
+    img {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-45%));
+        left: 0;
+        @include breakpoint(max-xl) {
+            max-width: 600px;
+        }
+    }
+}
+.banner-thumb-3 {
+    position: relative;
+    img {
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-45%));
+        left: -40px;
+        z-index: 1;
+        max-width: 750px;
+        @include breakpoint(max-xxl) {
+            left: -7%;
+            width: 700px;
+        }
+        @include breakpoint(max-xl) {
+            width: 550px;
+        }
+    }
+}
+/*Browse Slider Seciton Starts Here*/
+.browse-item {
+    display: block;
+    border-radius: 10px;
+    box-shadow: -2.034px 6.84px 10px 0px rgba(55, 34, 154, 0.3);
+    padding: 40px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $title-color;
+    margin: 15px;
+    background: $white-color;
+    font-family: $heading;
+    font-weight: 500;
+    img {
+        height: 88px;
+        width: unset !important;
+        margin: 0 auto 10px;
+    }
+    &:hover, &.active {
+        color: $white-color;
+        background: -moz-linear-gradient( 88deg, rgb(67,46,185) 4%, rgb(110,72,211) 58%, rgb(153,97,236) 100%);
+        background: -webkit-linear-gradient( 88deg, rgb(67,46,185) 4%, rgb(110,72,211) 58%, rgb(153,97,236) 100%);
+        background: -ms-linear-gradient( 88deg, rgb(67,46,185) 4%, rgb(110,72,211) 58%, rgb(153,97,236) 100%);
+    }
+}
+.browse-slider-section {
+    position: relative;z-index: 9;
+}
+.mt--140 {
+    margin-top: -140px;
+}
+/*Banner Section Four Starts Here*/
+.bot-0 {
+    bottom: 0;
+}
+.banner-thumb-4 {
+    position: relative;
+    .bid-now {
+        width: 140px;
+        height: 140px;
+        @include border-radius(50%);
+        color: $white-color;
+        position: absolute;
+        top: 130px;
+        left: 25px;
+        span {
+            display: block;
+        }
+        text-transform: capitalize;
+        i {
+            font-size: 48px;
+            line-height: 1;
+            display: block;
+            margin-bottom: 5px;
+        }
+        @extend %flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: -moz-linear-gradient( 135deg, rgb(245,49,127) 0%, rgb(255,124,110) 100%);
+        background: -webkit-linear-gradient( 135deg, rgb(245,49,127) 0%, rgb(255,124,110) 100%);
+        background: -ms-linear-gradient( 135deg, rgb(245,49,127) 0%, rgb(255,124,110) 100%);
+        box-shadow: 0px 5px 3px 0px rgba(245, 49, 127, 0.2);
+        @include breakpoint(max-xl) {
+            width: 100px;
+            height: 100px;
+            left: 0;
+            i {
+                font-size: 40px;
+            }
+        }
+        @media screen and (max-width:499px) {
+            width: 80px;
+            height: 80px;
+            top: 0px;
+            i {
+                font-size: 24px;
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+    @include breakpoint(lg) {
+        position: absolute;
+        left: 0;
+        @include transform(translate(-10%, -30%));
+        img {
+            max-width: 770px;
+        }
+        @include breakpoint(max-xxl) {
+            @include transform(translate(-21%, -42%));
+            img {
+                max-width: 700px;
+            }
+        }
+        @include breakpoint(max-xl) {
+            left: 0;
+            @include transform(translate(0, -50%));
+            img {
+                max-width: 550px;
+            }
+        }
+        @include breakpoint(xl) {
+            @include transform(translate(-21%, -42%));
+        }
+        @include breakpoint(xxl) {
+            @include transform(translate(-10%, -37%));
+        }
+    }
+    @include breakpoint(max-lg) {
+        width: 100%;
+        max-width: 500px;
+        margin: 40px auto 0;
+        img {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width:499px) {
+        margin-top: 30px;
+    }
+}
+.banner-section-4 {
+    position: relative;
+    overflow: hidden;
+    .container {
+        position: relative;z-index: 1;
+    }
+    padding: 240px 0 100px;
+    @include breakpoint(lg) {
+        padding: 270px 0 270px;
+    }
+    @include breakpoint(xl) {
+        padding: 280px 0 340px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 200px 0 70px;
+    }
+}
+
+/*Banner Section 5 Starts Here*/
+.banner-section-5 {
+    position: relative;
+    overflow: hidden;
+    .container {
+        position: relative;z-index: 1;
+    }
+    padding: 240px 0 120px;
+    @include breakpoint(lg) {
+        padding: 270px 0;
+    }
+    @include breakpoint(xl) {
+        padding: 280px 0 445px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 220px 0 120px;
+    }
+}
+.banner-thumb-5 {
+    position: relative;
+    img {
+        position: absolute;
+        top: 0;
+        left: -170px;
+        @include transform(translateY(-40%));
+    }
+    @include breakpoint(max-xl) {
+        img {
+            @include transform(translateY(-50%));
+            max-width: 800px;
+        }
+    }
+}
+.banner-shape-5 {
+    @include breakpoint(xl) {
+        min-width: 1920px;
+    }
+}
+
+.browse-item-2 {
+    @extend %flex;
+    padding: 30px 15px 25px;
+    border-radius: 5px;
+    box-shadow: -1px 0px 10px 0px rgba(55, 34, 154, 0.3);
+    margin: 15px;
+    align-items: center;
+    .thumb {
+        width: 40px;
+    }
+    .content {
+        width: calc(100% - 40px);
+        padding-left: 15px;
+        .title {
+            color: $title-color;
+            font-size: 16px;
+            line-height: 1.3;
+            display: block;
+            margin-bottom: 5px;
+            font-family: $heading;
+        }
+        .info {
+            color: $body-color;
+            font-size: 15px;
+            display: block;
+        }
+    }
+    .badges {
+        border-radius: 50%;
+        background: -moz-linear-gradient( -73deg, rgb(67,46,185) 4%, rgb(110,72,211) 58%, rgb(153,97,236) 100%);
+        background: -webkit-linear-gradient( -73deg, rgb(67,46,185) 4%, rgb(110,72,211) 58%, rgb(153,97,236) 100%);
+        background: -ms-linear-gradient( -73deg, rgb(67,46,185) 4%, rgb(110,72,211) 58%, rgb(153,97,236) 100%);
+        box-shadow: 0px 6px 10px 0px rgba(55, 34, 154, 0.22);
+        color: $white-color;
+        font-size: 13px;
+        line-height: 30px;
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: -15px;
+    }
+}
+/*Hero Section Starts Here*/
+.hero-section {
+    position: relative;
+    padding: 190px 0 505px;
+    .container, .container-fluid {
+        position: relative;
+        z-index: 1;
+    }
+    overflow: hidden;
+    @include breakpoint(max-lg) {
+        padding: 190px 0 160px;
+        &.style-2 {
+            padding-bottom: 300px;
+        }
+    }
+}
+@include breakpoint(lg) {
+    .pb-lg-400 {
+        padding-bottom: 400px !important;
+    }
+    .mt-lg--325 {
+        margin-top: -325px !important;
+    }
+}
+.hero-bg {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    li {
+        color: $white-color;
+        text-transform: capitalize;
+        a {
+            color: $white-color;
+            &::after {
+                content : "\f101";
+                font-family: "Flaticon";
+                font-weight: 500;
+                margin: 0 10px;
+                color: $white-color;
+            }
+            &:hover {
+                color: $theme-color;
+            }
+        }
+        span {
+            color: $white-color;
+        }
+    }
+}

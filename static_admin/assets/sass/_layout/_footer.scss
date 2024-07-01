@@ -1,0 +1,219 @@
+/*Footer Section Starts Here*/
+footer {
+    position: relative;
+}
+.footer-top-shape {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    @include transform(translateX(-50%));
+    min-width: 1400px;
+    width: 100%;
+    @include breakpoint(max-md) {
+        min-width: 570px;
+    }
+    img {
+        width: 100%;
+    }
+}
+.newslater-area {
+    @extend %flex;
+    .newslater-thumb {
+        padding: 15px;
+        img {
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+            top: 50%;
+            left: 30px;
+            @include transform(translateY(-50%));
+        }
+        display: none;
+        @include breakpoint(lg) {
+            display: block;
+        }
+    }
+    position: relative;
+    z-index: 1;
+    .newslater-content {
+        width: 100%;
+        padding: 15px;
+    }
+    padding: 20px 0;
+    @include breakpoint(sm) {
+        padding: 25px;
+    }
+    @include breakpoint(lg) {
+        padding: 55px 45px 45px;
+        .newslater-content, .newslater-thumb {
+            width: 50%;
+        }
+    }
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0.487px 3.97px 81px 0px rgba(40, 58, 140, 0.46);      
+}
+.subscribe-form {
+    position: relative;
+    input {
+        width: 100%;
+        padding: 0 150px 0 25px;
+        height: 60px;
+        background: transparent;
+        border: 1px solid #d9d9dd;
+        @include border-radius(30px);
+    }
+    button {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    @include breakpoint(max-sm) {
+        input {
+            height: 50px;
+            padding: 0 20px;
+        }
+        button {
+            position: relative;
+            margin-top: 20px;
+        }
+    }
+}
+.mb--60 {
+    margin-bottom: -60px;
+}
+.footer-widget {
+    margin-bottom: 60px;
+    .title {
+        color: $white-color;
+        margin-bottom: 18px;
+        font-weight: 500;
+        font-size: 24px;
+    }
+    .links-list {
+        margin-bottom: -14px;
+        li {
+            padding: 0;
+            a {
+                padding: 5px 0 4px;
+                color: rgba($color:$white-color, $alpha:.9);
+                font-weight: 400;
+                @include breakpoint(max-sm) {
+                    font-size: 16px;
+                }
+                i {
+                    margin-right: 35px;
+                    @media screen and (min-width:992px) and (max-width:1199px) {
+                        margin-right: 10px;
+                    }
+                }
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+        margin-bottom: 20px;
+    }
+}
+.copyright-area {
+    border-top: 1px solid rgba($color:$white-color, $alpha:0.302); 
+}
+.footer-bottom-wrapper {
+    @extend %flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 30px 0 0;
+    margin-left: -15px;
+    margin-right: -15px;
+    .logo, .gateway-area, .copyright {
+        margin-bottom: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .logo {
+        a {
+            display: block;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .gateway-area {
+        @extend %flex;
+        margin: -8px;
+        margin-bottom: 17px;
+        li {
+            padding: 8px;
+        }
+    }
+    .copyright {
+        p {
+            margin: 0 !important;
+            color: rgba($color:$white-color, $alpha:.9);
+        }
+    }
+    @include breakpoint(max-lg) {
+        .logo {
+            width: 150px;
+        }
+    }
+}
+.anime-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    div[class*="anime"] {
+        position: absolute;
+    }
+    .anime-1 {
+        top: 30px;
+        left: calc(50% - 500px);    
+    }
+    .anime-2 {
+        top: 40px;
+        left: calc(50% - 180px);    
+    }
+    .anime-3 {
+        top: 350px;
+        left: calc(50% - 620px);    
+    }
+    .anime-6 {
+        top: 250px;
+        left: calc(50% - 500px);
+    }
+    .anime-5 {
+        top: 330px;
+        left: calc(50% - 200px);
+    }
+    .anime-7 {
+        top: 360px;
+        left: calc(50% - 450px);
+    }
+}
+.social-icons {
+    margin: -5px;
+    @extend %flex;
+    li {
+        padding: 5px;
+        a {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            @include border-radius(50%);
+            background:  $white-color;
+            color: $body-color;
+            &:hover, &.active {
+                color: $white-color;
+                background: $theme-color;
+            }
+            @include breakpoint(max-xl) {
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+            }
+        }
+    }
+}

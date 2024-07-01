@@ -1,0 +1,138 @@
+<!--============= ScrollToTop Section Starts Here =============-->
+<div class="overlayer" id="overlayer">
+    <div class="loader">
+        <div class="loader-inner"></div>
+    </div>
+</div>
+<a href="#0" class="scrollToTop"><i class="fas fa-angle-up"></i></a>
+<div class="overlay"></div>
+<!--============= ScrollToTop Section Ends Here =============-->
+
+<!--============= Header Section Starts Here =============-->
+<header>
+    <div class="header-top">
+        <div class="container">
+            <div class="header-top-wrapper">
+                <ul class="customer-support">
+                    <li>
+                        <a href="#0" class="ml-3"><i class="fas fa-phone-alt"></i><span class="ml-2 d-none d-sm-inline-block">پشتیبانی</span></a>
+                    </li>
+                    <li>
+                        <i class="fas fa-globe"></i>
+                        <select name="language" class="select-bar">
+                            <option value="en">انگلیسی</option>
+                            <option value="fa">فارسی</option>
+                        </select>
+                    </li>
+                </ul>
+                <ul class="cart-button-area">
+{#                    <li>#}
+{#                        <a href="#0" class="cart-button"><i class="flaticon-shopping-basket"></i><span class="amount">08</span></a>#}
+{#                    </li>#}
+                {% if request.user.is_authenticated %}
+                    <li>
+                        <a href="sign-in.html" class="user-button"><i class="flaticon-user"></i></a>
+                    </li>
+                {% endif %}
+                    {% if request.user.is_authenticated %}
+                        {% else %}
+                    <li>
+                        <a href="{% url 'login-page' %}"><button type="button" class="btn btn-block btn-info btn-sm login-button login-button2">ورود</button></a>
+                        <a href="{% url 'sign-up-page' %}"><button type="button" class="btn btn-primary btn-sm login-button login-button2">ثبت نام</button></a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="{% url 'home_page' %}">
+                        <img id="logo_image" src="/static/assets/images/logo.png" alt="logo">
+                    </a>
+                </div>
+                <ul class="menu ml-auto">
+                    <li>
+                        <a href={% url 'home_page' %}>خانه</a>
+                    </li>
+                    <li>
+                        <a href="./product.html">حراج</a>
+                    </li>
+{#                    <li>#}
+{#                        <a href="#0">صفحات</a>#}
+{#                        <ul class="submenu">#}
+{#                            <li>#}
+{#                                <a href="#0">حساب من</a>#}
+{#                                <ul class="submenu">#}
+{#                                    <li>#}
+{#                                        <a href="./sign-up.html">ثبت نام</a>#}
+{#                                    </li>#}
+{#                                    <li>#}
+{#                                        <a href="./sign-in.html">ورود</a>#}
+{#                                    </li>#}
+{#                                </ul>#}
+{#                            </li>#}
+{#                            <li>#}
+{#                                <a href="#0">داشبورد</a>#}
+{#                                <ul class="submenu">#}
+{#                                    <li>#}
+{#                                        <a href="./dashboard.html">داشبورد</a>#}
+{#                                    </li>#}
+{#                                    <li>#}
+{#                                        <a href="./profile.html">پروفایل شخصی</a>#}
+{#                                    </li>#}
+{#                                    <li>#}
+{#                                        <a href="./my-bid.html">پیشنهادات من</a>#}
+{#                                    </li>#}
+{#                                    <li>#}
+{#                                        <a href="./winning-bids.html">پیشنهادات برنده</a>#}
+{#                                    </li>#}
+{#                                    <li>#}
+{#                                        <a href="./notifications.html">هشدار های من</a>#}
+{#                                    </li>#}
+{#                                    <li>#}
+{#                                        <a href="./my-favorites.html">علایق من</a>#}
+{#                                    </li>#}
+{#                                    <li>#}
+{#                                        <a href="./referral.html">مراجعات</a>#}
+{#                                    </li>#}
+{#                                </ul>#}
+{#                            </li>#}
+{##}
+{##}
+{#                        </ul>#}
+{#                    </li>#}
+                    <li>
+                        <a href="{% url 'contact_us_page' %}">تماس با ما</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about_us_page' %}">درباره ما</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'faqs_page' %}">سؤالات</a>
+                    </li>
+                    {% if request.user.is_authenticated %}
+                        <li>
+                        <a href="{% url 'logout_page' %}">خروج</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <form class="search-form">
+                    <input type="text" placeholder="جستجوی مارک ، مدل ....">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                <div class="search-bar d-md-none">
+                    <a href="#0"><i class="fas fa-search"></i></a>
+                </div>
+                <div class="header-bar d-lg-none">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--============= Header Section Ends Here =============-->

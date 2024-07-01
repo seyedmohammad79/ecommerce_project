@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>تماس با ما</title>
+
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/all.min.css">
+    <link rel="stylesheet" href="/static/assets/css/animate.css">
+    <link rel="stylesheet" href="/static/assets/css/nice-select.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.min.css">
+    <link rel="stylesheet" href="/static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/static/assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+
+    <link rel="shortcut icon" href="/static/assets/images/favicon2.png" type="image/x-icon">
+</head>
+
+<body>
+
+{% include 'header_component.html' %}
+
+{#<!--============= Cart Section Starts Here =============-->#}
+{#    <div class="cart-sidebar-area">#}
+{#        <div class="top-content">#}
+{#            <a href="index.html" class="logo">#}
+{#                <img src="/static/assets/images/logo/logo2.png" alt="logo">#}
+{#            </a>#}
+{#            <span class="side-sidebar-close-btn"><i class="fas fa-times"></i></span>#}
+{#        </div>#}
+{#        <div class="bottom-content">#}
+{#            <div class="cart-products">#}
+{#                <h4 class="title">سبد خرید</h4>#}
+{#                <div class="single-product-item">#}
+{#                    <div class="thumb">#}
+{#                        <a href="#0"><img src="/static/assets/images/shop/shop01.jpg" alt="shop"></a>#}
+{#                    </div>#}
+{#                    <div class="content">#}
+{#                        <h4 class="title"><a href="#0">مداد رنگی</a></h4>#}
+{#                        <div class="price"><span class="pprice">80.000 تومان</span> <del class="dprice">120.000 </del></div>#}
+{#                        <a href="#" class="remove-cart">حذف</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="single-product-item">#}
+{#                    <div class="thumb">#}
+{#                        <a href="#0"><img src="/static/assets/images/shop/shop02.jpg" alt="shop"></a>#}
+{#                    </div>#}
+{#                    <div class="content">#}
+{#                        <h4 class="title"><a href="#0">گلدان</a></h4>#}
+{#                        <div class="price"><span class="pprice">80.000 تومان</span> <del class="dprice">120.000 </del></div>#}
+{#                        <a href="#" class="remove-cart">حذف</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="single-product-item">#}
+{#                    <div class="thumb">#}
+{#                        <a href="#0"><img src="/static/assets/images/shop/shop03.jpg" alt="shop"></a>#}
+{#                    </div>#}
+{#                    <div class="content">#}
+{#                        <h4 class="title"><a href="#0">مقاله هنری</a></h4>#}
+{#                        <div class="price"><span class="pprice">80.000 تومان</span> <del class="dprice">120.000 </del></div>#}
+{#                        <a href="#" class="remove-cart">حذف</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="single-product-item">#}
+{#                    <div class="thumb">#}
+{#                        <a href="#0"><img src="/static/assets/images/shop/shop04.jpg" alt="shop"></a>#}
+{#                    </div>#}
+{#                    <div class="content">#}
+{#                        <h4 class="title"><a href="#0">ساعت</a></h4>#}
+{#                        <div class="price"><span class="pprice">80.000 تومان</span> <del class="dprice">120.000 </del></div>#}
+{#                        <a href="#" class="remove-cart">حذف</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="single-product-item">#}
+{#                    <div class="thumb">#}
+{#                        <a href="#0"><img src="/static/assets/images/shop/shop05.jpg" alt="shop"></a>#}
+{#                    </div>#}
+{#                    <div class="content">#}
+{#                        <h4 class="title"><a href="#0">کتاب</a></h4>#}
+{#                        <div class="price"><span class="pprice">80.000 تومان</span> <del class="dprice">120.000 </del></div>#}
+{#                        <a href="#" class="remove-cart">حذف</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="btn-wrapper text-center">#}
+{#                    <a href="#0" class="custom-button"><span>بررسی</span></a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#<!--============= Cart Section Ends Here =============-->#}
+
+
+<!--============= Hero Section Starts Here =============-->
+<div class="hero-section">
+    <div class="container">
+        <ul class="breadcrumb">
+            <li>
+                <a href="{% url 'home_page' %}">خانه</a>
+            </li>
+            <li>
+                <span>تماس با ما</span>
+            </li>
+        </ul>
+    </div>
+    <div class="bg_img hero-bg bottom_center" data-background="/static/assets/images/banner/hero-bg.png"></div>
+</div>
+<!--============= Hero Section Ends Here =============-->
+
+
+<!--============= Contact Section Starts Here =============-->
+<section class="contact-section padding-bottom">
+    <div class="container">
+        <div class="contact-wrapper padding-top padding-bottom mt--100 mt-lg--440">
+            <div class="section-header">
+                <h5 class="cate">تماس با ما</h5>
+                <h2 class="title">در تماس باشید</h2>
+                <p>خوشحال می شویم که بتوانیم به شما کمک بکنیم</p>
+            </div>
+            <div class="row">
+                <div class="col-xl-8 col-lg-7">
+                    <form class="contact-form" id="contact_form" method="post" action="{% url 'contact_us_page' %}">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="name"><i class="far fa-user"></i></label>
+                            <input type="text" placeholder="نام و نام خانوادگی" name="full_name" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-envelope-open-text"></i></label>
+                            <input type="text" placeholder="ایمیل  " name="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="message"><i class="far fa-envelope"></i></label>
+                            <textarea name="message" id="message" placeholder="متن پیام" required></textarea>
+                        </div>
+                        <div class="form-group text-center mb-0">
+                            <button type="submit" class="custom-button">ارسال</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xl-4 col-lg-5 d-lg-block d-none">
+                    <img src="/static/assets/images/contact.png" class="w-100" alt="images">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--============= Contact Section Ends Here =============-->
+
+{% include 'footer_component.html' %}
+{% if status %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+Swal.fire({
+  title: 'اعلان',
+  text: '{{ text }}',
+  icon: '{{ icon }}',
+    width: 500,
+  showCancelButton: false,
+  confirmButtonColor: "#3085d6",
+  confirmButtonText: '{{ confirmButtonText }}',
+    timer: 10000
+})
+</script>
+{% endif %}
+</body>
+
+</html>

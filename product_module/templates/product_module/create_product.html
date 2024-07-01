@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>ایجاد محصول</title>
+
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/all.min.css">
+    <link rel="stylesheet" href="/static/assets/css/animate.css">
+    <link rel="stylesheet" href="/static/assets/css/nice-select.css">
+    <link rel="stylesheet" href="/static/assets/css/owl.min.css">
+    <link rel="stylesheet" href="/static/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/static/assets/css/flaticon.css">
+    <link rel="stylesheet" href="/static/assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="/static/assets/css/main.css">
+
+    <link rel="shortcut icon" href="/static/assets/images/favicon2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    {% include 'header_component.html' %}
+
+
+    <!--============= Hero Section Starts Here =============-->
+    <div class="hero-section">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="{% url 'home_page' %}">خانه</a>
+                </li>
+                <li>
+                    <a href="#0">صفحات</a>
+                </li>
+                <li>
+                    <span>ثبت نام</span>
+                </li>
+            </ul>
+        </div>
+        <div class="bg_img hero-bg bottom_center" data-background="/static/assets/images/banner/hero-bg.png"></div>
+    </div>
+    <!--============= Hero Section Ends Here =============-->
+
+
+    <!--============= Account Section Starts Here =============-->
+    <section class="account-section padding-bottom">
+        <div class="container">
+            <div class="account-wrapper mt--100 mt-lg--440">
+                <div class="left-side">
+                    <div class="section-header">
+                        <h2 class="title">ایجاد محصول</h2>
+                        <p>لطفا اطلاعات محصول خود را وارد نمایید.</p>
+                    </div>
+                    <form class="login-form" method="post" action="{% url 'create_product_page' %}"
+                    enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group mb-30">
+                            <label for="login-email"><i class="far fa-list-alt"></i></label>
+                            {{ product_form.title }}
+                        </div>
+                        <div class="form-group mb-30">
+                            <label for="login-pass"><i class="fas fa-dollar-sign"></i></label>
+                            {{ product_form.start_price }}
+                        </div>
+                        <div class="form-group mb-30">
+                            <label for="login-pass"><i class="fas fa-money-check-alt"></i></label>
+                            {{ product_form.end_price }}
+                        </div>
+                        <div class="form-group mb-30">
+                            <label for="login-pass"><i class="fas fa-money-check-alt"></i></label>
+                            {{ product_form.Image }}
+                        </div>
+                        <label>مدت زمان حراجی:</label>
+                        <div class="form-group mb-30">
+{#                            <label for="login-pass"><i class="fas fa-money-check-alt"></i></label>#}
+                            {{ product_form.time }}
+                        </div>
+                        <label>دسته محصول:</label>
+                        <div class="form-group mb-30">
+{#                            <label for="login-pass"><i class="fas fa-money-check-alt"></i></label>#}
+                            {{ product_form.category }}
+                        </div>
+                        <label>توضیحات محصول:</label>
+                        <div class="form-group mb-30">
+{#                            <label for="login-pass"><i class="fas fa-lock"></i></label>#}
+                            {{ product_form.description }}
+                        </div>
+
+                        <div class="form-group mb-0">
+                            <button type="submit" class="custom-button">ایجاد</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="right-side cl-white">
+{#                    <img src="/static/assets/images/auction1.jpg" style="width: 100%; height: auto">#}
+                    <div class="section-header mb-0">
+
+                        <h3 class="title mt-0">علاقه به مزایده و حراجی دارید؟</h3>
+                        <p>کالای دست دوم خود را بدون واسط با بهترین قیمت بفروشید.</p>
+{#                        <a href="{% url 'login-page' %}" class="custom-button transparent">ورود</a>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============= Account Section Ends Here =============-->
+
+{% include 'footer_component.html' %}
+
+{% if status %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+Swal.fire({
+  title: 'اعلان',
+  text: '{{ text }}',
+  icon: '{{ icon }}',
+    width: 500,
+  showCancelButton: false,
+  confirmButtonColor: "#3085d6",
+  confirmButtonText: '{{ confirmButtonText }}',
+    timer: 10000
+})
+</script>
+{% endif %}
+
+</body>
+
+</html>

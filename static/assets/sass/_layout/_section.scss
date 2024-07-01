@@ -1,0 +1,4199 @@
+
+/*Client Section Starts Here*/
+.client-item {
+    background: $white-color;
+    margin: 15px;
+    border-radius: 20px;
+    box-shadow: 0.487px 3.97px 15px 0px rgba(40, 58, 140, 0.19);      
+    .client-content {
+        padding: 25px 30px;
+        p {
+            margin: 0 !important;
+        }
+    }
+    .client-author {
+        border-top: 1px solid #edeafb;
+        padding: 20px 30px;
+        @extend %flex;
+        align-items: center;
+        .thumb {
+            width: 50px;
+            height: 50px;
+            @include border-radius(50%);
+            overflow: hidden;
+            a {
+                display: block;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .content {
+            width: calc(100% - 50px);
+            padding-left: 20px;
+            .title {
+                margin: 0;
+                // font-size: 18px;
+            }
+            .ratings {
+                @extend %flex;
+                font-size: 14px;
+            }
+        }
+    }
+}
+.m--15 {
+    margin: -15px;
+}
+div[class*="auction"] {
+    .custom-button {
+        text-transform: capitalize;
+    }
+}
+/*How Section Starts Here*/
+.how-wrapper {
+    padding: 60px;
+    border-radius: 20px;
+    &.shadow-style {
+        @include breakpoint(md) {
+            background-color: $white-color;
+            box-shadow: 0 0 15px rgba($color:$title-color, $alpha:.2);
+        }
+    }
+    @include breakpoint(max-xl) {
+        padding: 60px 40px;
+    }
+    @include breakpoint(max-lg) {
+        padding: 50px 30px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 40px 15px;
+    }
+}
+.how-item {
+    margin-bottom: 40px;
+    text-align: center;
+    .how-thumb {
+        margin: 0 auto 25px;
+        img {
+            max-width: 100%;
+        }
+        @include breakpoint(md) {
+            margin-bottom: 40px;
+        }
+        @include breakpoint(max-sm) {
+            max-width: 180px;
+        }
+    }
+    .how-content {
+        .title {
+            margin-bottom: 18px;
+        }
+    }
+}
+.how-video-wrapper {
+    padding: 120px 0 110px;
+    text-align: center;
+    a {
+        .title {
+            color: $white-color;
+            margin-bottom: 20px;
+        }
+        .video-button {
+            margin: 0 auto;
+        }
+    }
+    @include breakpoint(max-lg) {
+        padding: 80px 0;
+    }
+}
+.car-1, .car-2 {
+    position: absolute;
+    top: 0;
+    @media screen and (max-width:1700px) {
+        img {
+            max-width: 350px;
+        }
+    }
+    @media screen and (max-width:1599px) {
+        img {
+            max-width: 280px;
+        }
+    }
+}
+.car-1 {
+    left: 0;
+}
+.car-2 {
+    right: 0;
+}
+/*Art & Electronics Auction Section Starts Here*/
+.auction-item-1 {
+    border: 1px solid rgb(212, 215, 245);
+    border-radius: 10px;
+    @extend %flex;
+    padding: 10px;
+    margin: 0 1px 30px 0;
+    align-items: center;
+    overflow: hidden;
+    .auction-thumb {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: rgb(246, 246, 255);
+        @extend %flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(50% - 7px);
+        .bid {
+            width: 40px;
+            height: 40px;
+            color: $white-color;
+            line-height: 40px;
+            font-size: 18px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            @include border-radius(50%);
+            text-align: center;
+            background: -moz-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            background: -webkit-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            background: -ms-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.13);              
+        }
+        .rating {
+            color: #ff7800;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .auction-content {
+        padding-left: 20px;
+        width: calc(50% + 7px);
+        .title {
+            margin: 0;
+            line-height: 28px;
+            font-size: 20px;
+            margin-bottom: 15px;
+            a {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        .bid-amount {
+            padding: 12px 20px;
+            @extend %flex;
+            align-items: center;
+            border-bottom: 2px dotted #deddf5;
+            border-top: 2px dotted #deddf5;
+            .icon {
+                i {
+                    line-height: 1;
+                    font-size: 36px;
+                    color: $theme-two;
+                }
+            }
+            .amount-content {
+                padding-left: 15px;
+                .current {
+                    font-size: 14px;
+                    color: $theme-two;
+                    line-height: 20px;
+                    margin-bottom: 5px;
+                }
+                .amount {
+                    font-size: 20px;
+                    line-height: 20px;
+                    color: $title-color;
+                }
+            }
+        }
+        .countdown-area {
+            font-size: 16px;
+            @extend %flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+            .countdown {
+                margin-top: 5px;
+            }
+            .total-bids {
+                margin-top: 5px;
+                width: 80px;
+                color: $theme-two;
+                padding-left: 15px;
+                text-shadow: 0px 6px 7px rgba(0, 0, 0, 0.19); 
+                border-left: 1px solid #d0cff0;
+                line-height: 20px;                 
+            }
+        }
+    }
+    @media screen and (max-width:520px) {
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        .auction-thumb , .auction-content {
+            width: 100%;
+        }
+        .auction-content {
+            padding: 0;
+            padding-top: 30px;
+        }
+    }
+}
+.countdown {
+    text-shadow: 0px 5px 3px rgba(245, 49, 127, 0.2);
+    background: -webkit-linear-gradient(#ff7c6e, #f5317f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*Coins & Bullions Auction Section Starts Here*/
+.auction-item-2 {
+    padding: 10px 10px 30px;
+    border-radius: 10px;
+    background-color: $white-color;
+    box-shadow: 0px 9px 20px 0px rgba(22, 26, 57, 0.36);
+    margin: 0 auto 30px;
+    @include breakpoint(max-sm) {
+        max-width: 350px;
+    }
+    .auction-thumb {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: rgb(246, 246, 255);
+        @extend %flex;
+        justify-content: center;
+        align-items: center;
+        .bid {
+            width: 40px;
+            height: 40px;
+            color: $white-color;
+            line-height: 40px;
+            font-size: 18px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            @include border-radius(50%);
+            text-align: center;
+            background: -moz-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            background: -webkit-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            background: -ms-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.13);              
+        }
+        .rating {
+            color: #ff7800;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .auction-content {
+        .title {
+            margin: 0;
+            line-height: 28px;
+            font-size: 20px;
+            padding: 16px 0;
+            a {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        .custom-button {
+            width: 100%;
+            max-width: 230px;
+            text-align: center;
+        }
+        .bid-area {
+            @extend %flex;
+            .bid-amount {
+                padding: 12px 10px;
+                @extend %flex;
+                align-items: center;
+                border-bottom: 2px dotted #deddf5;
+                border-top: 2px dotted #deddf5;
+                width: 50%;
+                justify-content: center;
+                .icon {
+                    max-width: 30px;
+                    i {
+                        line-height: 1;
+                        font-size: 36px;
+                        color: $theme-two;
+                    }
+                    @include breakpoint(lg) {
+                        @include breakpoint(max-xl) {
+                            max-width: 25px;
+                            i {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+                .amount-content {
+                    padding-left: 15px;
+                    max-width: calc(100% - 30px);
+                    .current {
+                        font-size: 14px;
+                        color: $theme-two;
+                        line-height: 20px;
+                        margin-bottom: 5px;
+                    }
+                    .amount {
+                        font-size: 20px;
+                        line-height: 20px;
+                        color: $title-color;
+                    }
+                    @include breakpoint(lg) {
+                        @include breakpoint(max-xl) {
+                            max-width: calc(100% - 25px);
+                            .amount {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+                position: relative;
+                &::before {
+                    width: 1px;
+                    right: 0;
+                    bottom: 15px;
+                    top: 15px;
+                    @extend %pa;
+                    background: #bfbee8;
+                }
+                &:nth-child(even) {
+                    &::before {
+                        display: none;
+                    }
+                    .icon i,
+                    .amount-content .current {
+                        color: $theme-color;
+                    }
+                }
+                @include breakpoint(max-xl) {
+                    @include breakpoint(lg) {
+                        padding: 12px 5px;
+                    }
+                }
+                @media screen and (max-width: 450px) {
+                    padding: 12px 0;
+                    .icon {
+                        width: 25px;
+                        i {
+                            font-size: 30px;
+                        }
+                    }
+                    .amount-content {
+                        padding-left: 15px;
+                        .amount {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .countdown-area {
+            font-size: 18px;
+            @extend %flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            .countdown {
+                margin-top: 5px;
+                text-shadow: 0px 5px 3px rgba(245, 49, 127, 0.2);
+                background: -webkit-linear-gradient(#ff7c6e, #f5317f);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .total-bids {
+                margin-top: 5px;
+                color: $theme-two;
+                padding-left: 15px;
+                text-shadow: 0px 6px 7px rgba(0, 0, 0, 0.19); 
+                border-left: 1px solid #d0cff0;
+                line-height: 20px;
+                @include breakpoint(xl) {
+                    padding-left: 35px;
+                }
+            }
+        }
+    }
+}
+
+/*Jewelry Section Starts Here*/
+.jewelry-bg, .car-bg {
+    position: absolute;
+    img {
+        width: 100%;
+    }
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+.car-bg {
+    min-width: 1400px;
+    left: 50%;
+    @include transform(translateX(-50%));
+}
+
+/*Call In Section Starts Here*/
+.call-wrapper {
+    padding: 80px 80px 50px;
+    border-radius: 20px;
+    @extend %flex;
+    justify-content: space-between;
+    align-items: center;
+    .section-header {
+        max-width: 420px;
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    .custom-button {
+        color: $theme-color;
+        margin-bottom: 30px;
+    }
+    @include breakpoint(max-lg) {
+        padding: 65px 40px 30px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 65px 30px 30px;
+    }
+    @media screen and (max-width:499px) {
+        padding: 65px 15px 30px;
+    }
+}
+
+/*Popular Auction Section Starts Here*/
+.auction-item-3 {
+    @extend %flex;
+    margin-bottom: 40px;
+    .auction-thumb {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: rgb(246, 246, 255);
+        @extend %flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(50% - 7px);
+        .bid {
+            width: 40px;
+            height: 40px;
+            color: $white-color;
+            line-height: 40px;
+            font-size: 18px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            @include border-radius(50%);
+            text-align: center;
+            background: -moz-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            background: -webkit-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            background: -ms-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.13);              
+        }
+        .rating {
+            color: #ff7800;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .auction-content {
+        padding-left: 20px;
+        width: calc(50% + 7px);
+        text-align: center;
+        align-self: center;
+        .title {
+            margin: 0;
+            line-height: 26px;
+            font-size: 20px;
+            margin-bottom: 15px;
+            a {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        .bid-amount {
+            padding: 12px 20px;
+            @extend %flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px dotted #deddf5;
+            border-top: 2px dotted #deddf5;
+            .icon {
+                i {
+                    line-height: 1;
+                    font-size: 36px;
+                    color: $theme-two;
+                }
+            }
+            .amount-content {
+                padding-left: 15px;
+                .current {
+                    font-size: 14px;
+                    color: $theme-two;
+                    line-height: 20px;
+                    margin-bottom: 5px;
+                }
+                .amount {
+                    font-size: 20px;
+                    line-height: 20px;
+                    color: $title-color;
+                }
+            }
+        }
+        .bids-area {
+            margin-top: 7px;
+            font-size: 16px;
+            .total-bids {
+                    color: $theme-two;
+                }
+        }
+    }
+    @media screen and (max-width:520px) {
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        .auction-thumb , .auction-content {
+            width: 100%;
+        }
+        .auction-content {
+            padding: 0;
+            padding-top: 20px;
+        }
+    }
+}
+.popular-auction-wrapper {
+    border-radius: 20px;
+    background-color: $white-color;
+    box-shadow: 0 0 20px rgba($color:$title-color, $alpha:.2);
+    padding: 50px 30px;
+    @include breakpoint(max-md) {
+        box-shadow: none;
+        background: transparent;
+        padding: 0;
+        .auction-item-3 {
+            box-shadow: 0px 9px 20px 0px rgba(22, 26, 57, 0.26);
+            background: $white-color;
+            padding: 15px;
+            @include border-radius(10px);
+            margin-bottom: 30px;
+        }
+    }
+}
+.popular-bg, .how-video-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    max-height: calc(100% - 120px);
+}
+.how-video-shape {
+    background-size: contain;
+    background-position: left top;
+}
+
+/*Real Estate Auction Starts Here*/
+.auction-item-4 {
+    border-radius: 10px;
+    .auction-thumb {
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        background-color: rgb(246, 246, 255);
+        @extend %flex;
+        justify-content: center;
+        align-items: center;
+        .bid {
+            width: 40px;
+            height: 40px;
+            color: $white-color;
+            line-height: 40px;
+            font-size: 18px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            @include border-radius(50%);
+            text-align: center;
+            background: -moz-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            background: -webkit-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            background: -ms-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+            box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.13);              
+        }
+        .rating {
+            color: #ff7800;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        img {
+            width: 100%;
+        }
+        a {
+            display: block;
+        }
+        width: 100%;
+    }
+    .auction-content {
+        width: 100%;
+        text-align: center;
+        .title {
+            margin: 0;
+            padding: 16px 0;
+            a {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+        .custom-button {
+            width: 100%;
+            max-width: 230px;
+            text-align: center;
+        }
+        .bid-area {
+            @extend %flex;
+            .bid-amount {
+                padding: 12px 10px;
+                @extend %flex;
+                align-items: center;
+                border-bottom: 2px dotted #deddf5;
+                border-top: 2px dotted #deddf5;
+                width: 50%;
+                justify-content: center;
+                .icon {
+                    max-width: 30px;
+                    i {
+                        line-height: 1;
+                        font-size: 36px;
+                        color: $theme-two;
+                    }
+                    @include breakpoint(lg) {
+                        @include breakpoint(max-xl) {
+                            max-width: 25px;
+                            i {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+                .amount-content {
+                    padding-left: 15px;
+                    max-width: calc(100% - 30px);
+                    .current {
+                        font-size: 14px;
+                        color: $theme-two;
+                        line-height: 20px;
+                        margin-bottom: 5px;
+                    }
+                    .amount {
+                        font-size: 20px;
+                        line-height: 20px;
+                        color: $title-color;
+                    }
+                    @include breakpoint(lg) {
+                        @include breakpoint(max-xl) {
+                            max-width: calc(100% - 25px);
+                            .amount {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+                position: relative;
+                &::before {
+                    width: 1px;
+                    right: 0;
+                    bottom: 15px;
+                    top: 15px;
+                    @extend %pa;
+                    background: #bfbee8;
+                }
+                &:nth-child(even) {
+                    &::before {
+                        display: none;
+                    }
+                    .icon i,
+                    .amount-content .current {
+                        color: $theme-color;
+                    }
+                }
+                @include breakpoint(max-xl) {
+                    @include breakpoint(lg) {
+                        padding: 12px 5px;
+                    }
+                }
+                @media screen and (max-width: 450px) {
+                    padding: 12px 0;
+                    .icon {
+                        width: 25px;
+                        i {
+                            font-size: 30px;
+                        }
+                    }
+                    .amount-content {
+                        padding-left: 15px;
+                        .amount {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+        .countdown-area {
+            font-size: 18px;
+            @extend %flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            .countdown {
+                margin-top: 5px;
+                text-shadow: 0px 5px 3px rgba(245, 49, 127, 0.2);
+                background: -webkit-linear-gradient(#ff7c6e, #f5317f);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .total-bids {
+                margin-top: 5px;
+                color: $theme-two;
+                padding-left: 15px;
+                text-shadow: 0px 6px 7px rgba(0, 0, 0, 0.19); 
+                border-left: 1px solid #d0cff0;
+                line-height: 20px;
+                @include breakpoint(xl) {
+                    padding-left: 35px;
+                }
+            }
+        }
+    }
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    @include breakpoint(lg) {
+        justify-content: space-between;
+        align-items: center;
+        .auction-content {
+            width: calc((calc(100% / 12) * 5) - 15px);
+            .title {
+                margin-bottom: 15px;
+            }
+            .countdown-area {
+                margin-top: 15px;
+                margin-bottom: 25px;
+                .total-bids {
+                    width: 50%;
+                }
+            }
+        }
+        .auction-thumb {
+            width: calc((calc(100% / 12) * 7) - 15px);
+        }
+    }
+    @include breakpoint(max-lg) {
+        background-color: $white-color;
+        border: 1px solid rgb(212, 215, 245);
+        padding: 10px 10px 30px;
+    }
+    @include breakpoint(max-sm) {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+.owl-dots {
+    counter-reset: realCounter;
+    position: absolute;
+    right: 60px;
+    bottom: -60px;
+    width: 175px;
+    text-align: center;
+    .owl-dot {
+        counter-increment: realCounter;
+        background: transparent;
+        position: relative;
+        span {
+            display: none !important;
+        }
+        &::before {
+            content: counter(realCounter);
+            margin: 0;
+            width: 30px !important;
+            height: 30px !important;
+            line-height: 30px !important;
+            display: block !important;
+            color: $body-color;
+        }
+        &.active {
+            &::before {
+                color: $theme-one;
+                font-size: 24px;
+            }
+        }
+        &:nth-of-type(n + 6) {
+            display: none;
+        }
+    }
+    @include breakpoint(max-md) {
+        width: unset;
+        left: 60px;
+    }
+}
+
+/*Upcoming Auction Section Starts Here*/
+.filter-wrapper {
+    box-shadow: 0px 14px 10px 0px rgba(236, 232, 253, 1);
+    margin-bottom: 40px;
+    @include breakpoint(lg) {
+        margin-bottom: 60px;
+    }
+}
+.filter {
+    @extend %flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: -25px;
+    li {
+        flex-grow: 1;
+        cursor: pointer;
+        padding: 0;
+        text-transform: capitalize;
+        span {
+            padding: 15px 25px;
+            display: inline-block;
+            position: relative;
+            &::before {
+                @extend %pa;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                background: $theme-color;
+                width: 0;
+                @include transition($transition);
+            }
+            @include breakpoint(max-md) {
+                padding: 5px 15px;
+                font-size: 16px;
+            }
+        }
+        &.active {
+            color: $theme-color;
+            span::before {
+                width: 100%;
+            }
+        }
+        i {
+            margin-right: 5px;
+        }
+    }
+    &.niche-border {
+        border-bottom: 2px solid rgb(212, 212, 241);
+        li {
+            span {
+                &::before {
+                    bottom: -2px;
+                }
+            }
+        }
+    }
+}
+.no-shadow {
+    box-shadow: none;
+}
+.auction-wrapper-5, .auction-wrapper-7 {
+    @extend %flex;
+}
+.auction-item-5 {
+    padding: 15px;
+    width: 100%;
+    .auction-inner {
+        @extend %flex;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 9px 20px 0px rgba(22, 26, 57, 0.36);
+        overflow: hidden;
+        position: relative;
+        .auction-thumb {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: rgb(246, 246, 255);
+            @extend %flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            .rating {
+                color: #ff7800;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .auction-content {
+            width: 495px;
+            padding: 15px 20px;
+            align-self: center;
+            .title-area {
+                padding: 0 0 30px;
+                .title {
+                    margin: 0;
+                    line-height: 28px;
+                    font-size: 20px;
+                    margin-bottom: 16px;
+                    a {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+                .list-area {
+                    @extend %flex;
+                    margin: -5px -20px;
+                    font-size: 16px;
+                    @include breakpoint(max-lg) {
+                        font-size: 14px;
+                    }
+                    .list-item {
+                        padding: 5px 20px;
+                        color: $body-color;
+                        border-right: 1px solid #bfbee8;
+                        display: inline-block;
+                        line-height: 1;
+                        max-width: 50%;
+                        &:last-child {
+                            border: none;
+                        }
+                        .list-id {
+                            color: $title-color;
+                            font-family: $heading;
+                            font-weight: 500;
+                            &::after {
+                                content: " : ";
+                            }
+                        }
+                    }
+                }
+            }
+            .bid-area {
+                border-bottom: 2px dotted #deddf5;
+                border-top: 2px dotted #deddf5;
+                .bid-inner {
+                    @extend %flex;
+                    .bid-amount {
+                        padding: 12px 10px;
+                        @extend %flex;
+                        align-items: center;
+                        max-width: 50%;
+                        width: 185px;
+                        .icon {
+                            max-width: 30px;
+                            i {
+                                line-height: 1;
+                                font-size: 36px;
+                                color: $theme-two;
+                            }
+                            @include breakpoint(lg) {
+                                @include breakpoint(max-xl) {
+                                    max-width: 25px;
+                                    i {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                        }
+                        .amount-content {
+                            padding-left: 15px;
+                            max-width: calc(100% - 30px);
+                            .current {
+                                font-size: 14px;
+                                color: $theme-two;
+                                line-height: 20px;
+                                margin-bottom: 5px;
+                            }
+                            .amount {
+                                font-size: 20px;
+                                line-height: 20px;
+                                color: $title-color;
+                            }
+                            @include breakpoint(lg) {
+                                @include breakpoint(max-xl) {
+                                    max-width: calc(100% - 25px);
+                                    .amount {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                        position: relative;
+                        &::before {
+                            width: 1px;
+                            right: 0;
+                            bottom: 15px;
+                            top: 15px;
+                            @extend %pa;
+                            background: #bfbee8;
+                        }
+                        &:nth-child(even) {
+                            @include breakpoint(xl) {
+                                padding-left: 30px;
+                            }
+                            &::before {
+                                display: none;
+                            }
+                            .icon i,
+                            .amount-content .current {
+                                color: $theme-color;
+                            }
+                        }
+                        @include breakpoint(max-xl) {
+                            @include breakpoint(lg) {
+                                padding: 12px 5px;
+                            }
+                        }
+                        @media screen and (max-width: 450px) {
+                            padding: 12px 0;
+                            .icon {
+                                width: 25px;
+                                i {
+                                    font-size: 30px;
+                                }
+                            }
+                            .amount-content {
+                                padding-left: 15px;
+                                .amount {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+            .bid-count-area {
+                @extend %flex;
+                margin: -5px -20px;
+                margin-top: 15px;
+                font-size: 16px;
+                align-items: center;
+                @include breakpoint(max-lg) {
+                    font-size: 14px;
+                }
+                .item {
+                    padding: 5px 20px;
+                    color: $theme-two;
+                    border-right: 1px solid #bfbee8;
+                    display: inline-block;
+                    line-height: 1;
+                    max-width: 50%;
+                    &:last-child {
+                        border: none;
+                    }
+                    .left {
+                        color: $title-color;
+                        &::after {
+                            content: " : ";
+                        }
+                    }
+                }
+            }
+        }
+        .auction-bidding {
+            border-radius: 10px;
+            background-color: rgba(214, 213, 243, 0.302);
+            padding: 30px 15px;
+            width: calc(100% - 350px - 495px);
+            text-align: center;
+            .bid-title {
+                color: $theme-one;
+                font-family: $heading;
+                font-weight: 500;
+            }
+            .countdown {
+                margin-bottom: 30px;
+            }
+            .bid-incr {
+                margin-bottom: 25px;
+                .title {
+                    margin-bottom: 18px;
+                    display: block;
+                }
+            }
+            .custom-button {
+                text-transform: capitalize;
+                font-size: 16px;
+            }
+        }
+        @include breakpoint(max-xl) {
+            .auction-thumb {
+                width: 250px;
+            }
+            .auction-content {
+                width: 410px;
+            }
+            .auction-bidding {
+                width: calc(100% - 260px - 400px);
+            }
+        }
+    }
+    @include breakpoint(max-lg) {
+        width: 50%;
+        .auction-inner {
+            .auction-thumb, .auction-content, .auction-bidding {
+                width: 100%;
+            }
+            .auction-content {
+                padding: 25px 0 30px;
+                .title-area {
+                    .title {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            .auction-bidding {
+                .custom-button {
+                    font-size: 14px;
+                }
+                .countdown {
+                    margin-bottom: 15px;
+                }
+                .bid-incr {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    @include breakpoint(max-md) {
+        width: 100%;
+        @media screen and (min-width:426px) {
+            text-align: center;
+            .title-area {
+                .list-area {
+                    justify-content: center;
+                    margin: -5px -15px;
+                }
+            }            
+            .bid-area {
+                .bid-inner {
+                    justify-content: center;
+                }
+            }
+            .bid-count-area {
+                justify-content: center;
+                margin: -5px -15px;
+            }
+        }
+    }
+    @media screen and (max-width:425px) {
+        .auction-inner {
+            .auction-content {
+                padding: 20px 0;
+                .title-area {
+                    padding-bottom: 20px;
+                    .title {
+                        margin-bottom: 12px;
+                    }
+                    .list-area {
+                        .list-item {
+                            width: 100%;
+                            max-width: 100%;
+                            border: none;
+                        }
+                    }
+                }
+                .bid-count-area {
+                    .item {
+                        width: 100%;
+                        max-width: 100%;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.upcoming-badge {
+    width: 125px;
+    height: 128px;
+    @extend %pa;
+    left: 0;
+    top: 0;
+    color: $white-color;
+    font-size: 30px;
+    padding: 20px;
+    line-height: 1;
+    z-index: 2;
+    background: -moz-linear-gradient( 135deg, rgb(44,191,199) 0%, rgb(70,238,170) 100%);
+    background: -webkit-linear-gradient( 135deg, rgb(44,191,199) 0%, rgb(70,238,170) 100%);
+    background: -ms-linear-gradient( 135deg, rgb(44,191,199) 0%, rgb(70,238,170) 100%);   
+    clip-path: polygon(100% 0, 0% 100%, 0 0);   
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 0 0);   
+    text-align: left;
+    @media screen and (max-width:425px) {
+        width: 100px;
+        height: 100px;
+        padding: 15px;
+        font-size: 24px;        
+    }
+}
+/*Upcoming Auction Section Starts Here*/
+.auction-item-7 {
+    padding: 15px;
+    width: 100%;
+    .auction-inner {
+        @extend %flex;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 9px 20px 0px rgba(22, 26, 57, 0.36);
+        overflow: hidden;
+        position: relative;
+        .auction-thumb {
+            position: relative;
+            overflow: hidden;
+            background-color: rgb(246, 246, 255);
+            @extend %flex;
+            justify-content: center;
+            align-items: center;
+            width: 350px;
+            .rating {
+                color: #ff7800;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .auction-content {
+            width: 495px;
+            padding: 15px 20px;
+            align-self: center;
+            .title-area {
+                padding: 0 0 15px;
+                .title {
+                    margin: 0;
+                    line-height: 28px;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    a {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 1;
+                        -webkit-box-orient: vertical;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+                .list-area {
+                    @extend %flex;
+                    margin: -5px -20px 9px;
+                    font-size: 16px;
+                    @include breakpoint(max-lg) {
+                        font-size: 14px;
+                    }
+                    .list-item {
+                        padding: 5px 20px;
+                        color: $body-color;
+                        border-right: 1px solid #bfbee8;
+                        display: inline-block;
+                        line-height: 1;
+                        max-width: 50%;
+                        &:last-child {
+                            border: none;
+                        }
+                        .list-id {
+                            color: $title-color;
+                            font-family: $heading;
+                            font-weight: 500;
+                            &::after {
+                                content: " : ";
+                            }
+                        }
+                    }
+                }
+                .item-feature {
+                    margin: 0 -10px;
+                    span {
+                        padding: 0 12px 0 10px;
+                        margin-bottom: 5px;
+                        font-size: 14px;
+                        position: relative;
+                        &::after {
+                            content: "|";
+                            font-size: 12px;
+                            position: absolute;
+                            right: 0;top: 0;line-height: 1;
+                        }
+                        &:last-child {
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .bid-area {
+                border-bottom: 2px dotted #deddf5;
+                border-top: 2px dotted #deddf5;
+                .bid-inner {
+                    @extend %flex;
+                    .bid-amount {
+                        padding: 12px 10px;
+                        @extend %flex;
+                        align-items: center;
+                        max-width: 50%;
+                        width: 185px;
+                        .icon {
+                            max-width: 30px;
+                            i {
+                                line-height: 1;
+                                font-size: 36px;
+                                color: $theme-two;
+                            }
+                            @include breakpoint(lg) {
+                                @include breakpoint(max-xl) {
+                                    max-width: 25px;
+                                    i {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+                        }
+                        .amount-content {
+                            padding-left: 15px;
+                            max-width: calc(100% - 30px);
+                            .current {
+                                font-size: 14px;
+                                color: $theme-two;
+                                line-height: 20px;
+                                margin-bottom: 5px;
+                            }
+                            .amount {
+                                font-size: 20px;
+                                line-height: 20px;
+                                color: $title-color;
+                            }
+                            @include breakpoint(lg) {
+                                @include breakpoint(max-xl) {
+                                    max-width: calc(100% - 25px);
+                                    .amount {
+                                        font-size: 18px;
+                                    }
+                                }
+                            }
+                        }
+                        position: relative;
+                        &::before {
+                            width: 1px;
+                            right: 0;
+                            bottom: 15px;
+                            top: 15px;
+                            @extend %pa;
+                            background: #bfbee8;
+                        }
+                        &:nth-child(even) {
+                            @include breakpoint(xl) {
+                                padding-left: 30px;
+                            }
+                            &::before {
+                                display: none;
+                            }
+                            .icon i,
+                            .amount-content .current {
+                                color: $theme-color;
+                            }
+                        }
+                        @include breakpoint(max-xl) {
+                            @include breakpoint(lg) {
+                                padding: 12px 5px;
+                            }
+                        }
+                        @media screen and (max-width: 450px) {
+                            padding: 12px 0;
+                            .icon {
+                                width: 25px;
+                                i {
+                                    font-size: 30px;
+                                }
+                            }
+                            .amount-content {
+                                padding-left: 15px;
+                                .amount {
+                                    font-size: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+            .bid-count-area {
+                @extend %flex;
+                margin: -5px -20px;
+                margin-top: 15px;
+                font-size: 16px;
+                align-items: center;
+                @include breakpoint(max-lg) {
+                    font-size: 14px;
+                }
+                .item {
+                    padding: 5px 20px;
+                    color: $theme-two;
+                    border-right: 1px solid #bfbee8;
+                    display: inline-block;
+                    line-height: 1;
+                    max-width: 50%;
+                    &:last-child {
+                        border: none;
+                    }
+                    .left {
+                        color: $title-color;
+                        &::after {
+                            content: " : ";
+                        }
+                    }
+                }
+            }
+        }
+        .auction-bidding {
+            border-radius: 10px;
+            background-color: rgba(214, 213, 243, 0.302);
+            padding: 30px 15px;
+            width: calc(100% - 350px - 495px);
+            text-align: center;
+            .bid-title {
+                color: $theme-one;
+                font-family: $heading;
+                font-weight: 500;
+            }
+            .countdown {
+                margin-bottom: 30px;
+            }
+            .bid-incr {
+                margin-bottom: 25px;
+                .title {
+                    margin-bottom: 18px;
+                    display: block;
+                }
+            }
+            .custom-button {
+                text-transform: capitalize;
+                font-size: 16px;
+            }
+        }
+        @include breakpoint(max-xl) {
+            .auction-thumb {
+                width: 250px;
+            }
+            .auction-content {
+                width: 410px;
+            }
+            .auction-bidding {
+                width: calc(100% - 260px - 400px);
+            }
+        }
+    }
+    @include breakpoint(max-lg) {
+        width: 50%;
+        .auction-inner {
+            padding: 10px;
+            .auction-thumb, .auction-content, .auction-bidding {
+                width: 100%;
+            }
+            .auction-thumb {
+                border-radius: 10px;
+            }
+            .auction-content {
+                padding: 25px 0 30px;
+                .title-area {
+                    .title {
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+            .auction-bidding {
+                .custom-button {
+                    font-size: 14px;
+                }
+                .countdown {
+                    margin-bottom: 15px;
+                }
+                .bid-incr {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    @include breakpoint(max-md) {
+        width: 100%;
+        @media screen and (min-width:426px) {
+            text-align: center;
+            .title-area {
+                .list-area {
+                    justify-content: center;
+                    margin: -5px -15px;
+                }
+            }            
+            .bid-area {
+                .bid-inner {
+                    justify-content: center;
+                }
+            }
+            .bid-count-area {
+                justify-content: center;
+                margin: -5px -15px;
+            }
+        }
+    }
+    @media screen and (max-width:425px) {
+        .auction-inner {
+            .auction-content {
+                padding: 20px 0;
+                .title-area {
+                    padding-bottom: 20px;
+                    .title {
+                        margin-bottom: 12px;
+                    }
+                    .list-area {
+                        .list-item {
+                            width: 100%;
+                            max-width: 100%;
+                            border: none;
+                        }
+                    }
+                }
+                .bid-count-area {
+                    .item {
+                        width: 100%;
+                        max-width: 100%;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.upcoming-badge-2 {
+    width: 34px;
+    height: 60px;
+    background: $theme-two;
+    color: $white-color;
+    line-height: 74px;
+    text-align: center;
+    @include border-radius(0 0 17px 17px);
+    position: absolute;
+    left: 30px;
+    top: 0;
+    z-index: 1;
+    &:hover {
+        color: $white-color;
+    }
+}
+
+/*Trending Auction Starts Here*/
+.auction-item-6 {
+    margin-bottom: 30px;
+    .auction-inner {
+        @extend %flex;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 9px 20px 0px rgba(22, 26, 57, 0.36);
+        overflow: hidden;
+        position: relative;
+        .auction-thumb {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: rgb(246, 246, 255);
+            @extend %flex;
+            justify-content: center;
+            align-items: center;
+            width: 325px;
+            .rating {
+                color: #ff7800;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            .bid {
+                width: 40px;
+                height: 40px;
+                color: $white-color;
+                line-height: 40px;
+                font-size: 18px;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                @include border-radius(50%);
+                text-align: center;
+                background: -moz-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+                background: -webkit-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+                background: -ms-linear-gradient( 135deg, rgb(177,34,230) 0%, rgb(255,99,222) 100%);
+                box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.13);              
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .auction-content {
+            width: calc(100% - 245px - 325px);
+            padding: 10px 30px;
+            .title {
+                margin: 0;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $border-color;
+                a {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+            .item-information {
+                @extend %flex;
+                padding-top: 17px;
+                margin-bottom: -10px;
+                ul {
+                    width: 50%;
+                    li {
+                        padding: 0;
+                        color: $title-color;
+                        margin-bottom: 5px;
+                        font-size: 16px;
+                        span {
+                            color: #717185;
+                            &::after {
+                                content: ":";
+                                margin: 0 5px;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                    &:nth-child(even) {
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+        .auction-bidding {
+            border-radius: 10px;
+            background-color: rgba(214, 213, 243, 0.302);
+            padding: 25px 15px;
+            width: 245px;
+            text-align: center;
+            .bid-title {
+                color: $theme-one;
+                font-family: $heading;
+                font-weight: 500;
+            }
+            .countdown {
+                margin-bottom: 15px;
+            }
+            .bid-amount {
+                padding: 12px 20px;
+                @extend %flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 2px dotted #deddf5;
+                border-top: 2px dotted #deddf5;
+                .icon {
+                    i {
+                        line-height: 1;
+                        font-size: 36px;
+                        color: $theme-two;
+                    }
+                }
+                .amount-content {
+                    padding-left: 15px;
+                    .current {
+                        font-size: 14px;
+                        color: $theme-two;
+                        line-height: 20px;
+                        margin-bottom: 5px;
+                    }
+                    .amount {
+                        font-size: 20px;
+                        line-height: 20px;
+                        color: $title-color;
+                    }
+                }
+            }
+            .bids-area {
+                padding: 15px 0;
+                font-size: 16px;
+                .total-bids {
+                        color: $theme-two;
+                    }
+            }
+            .custom-button {
+                text-transform: capitalize;
+                font-size: 16px;
+            }
+        }
+        @include breakpoint(max-xl) {
+            .auction-thumb {
+                width: 220px;
+            }
+            .auction-content {
+                width: calc(100% - 220px - 220px);
+                .item-information {
+                    ul {
+                        &:nth-child(even) {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+            .auction-bidding {
+                width: 220px;
+            }
+        }
+    }
+    @include breakpoint(max-lg) {
+        .auction-inner {
+            .auction-thumb, .auction-content, .auction-bidding {
+                width: 100%;
+            }
+            .auction-content {
+                padding: 30px 0;
+                text-align: center;
+                .title {
+                    padding-bottom: 15px;
+                }
+                .item-information {
+                    ul {
+                        width: 100%;
+                        padding-left: 0;
+                        &:nth-child(even) {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+            .auction-bidding {
+                .custom-button {
+                    font-size: 14px;
+                }
+                .countdown {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width:425px) {
+        .auction-inner {
+            .auction-content {
+                padding: 15px 0 25px;
+            }
+        }
+    }
+}
+
+/*Fetured Auction Section Starts Here*/
+.auction-item-8 {
+    border-radius: 10px;
+    background-color: $white-color;
+    box-shadow: 0px 9px 20px 0px rgba(22, 26, 57, 0.36);
+    margin: 0 auto 30px;
+    @include breakpoint(max-sm) {
+        max-width: 350px;
+    }
+    .auction-thumb {
+        @extend %flex;
+        .countdown-area {
+            width: 94px;
+            margin-bottom: -5px;
+            .countdown {
+                width: 34px;
+                height: 143px;
+                color: $white-color;
+                @include border-radius(0 0 17px 17px);
+                margin: 0 auto 15px;
+                box-shadow: 0px 7px 16px 0px rgba(31, 30, 72, 0.26);
+                position: relative;
+                &::after, &::before {
+                    position: absolute;
+                    content: " : ";
+                    left: 50%;
+                    @include transform(translateX(-50%));
+                }
+                &::after {
+                    top: 30px;
+                }
+                &::before {
+                    top: 75px;
+                }
+                text-shadow: 0px 5px 3px rgba(245, 49, 127, 0.2);
+                background-clip: unset;
+                -webkit-background-clip: unset;
+                -webkit-text-fill-color: unset;
+                background: $theme-two;
+                .count-item {
+                    background: transparent;
+                    color: #fff;
+                    text-shadow: none;
+                    text-align: center;
+                    font-size: 14px;
+                    line-height: 45px;
+                }
+            }
+            .bid, .rating {
+                margin: 0 auto 15px;
+                width: 34px;
+                height: 34px;
+                line-height: 34px;
+                text-align: center;
+                color: $theme-two;
+                box-shadow: 0px 7px 16px 0px rgba(31, 30, 72, 0.26);
+                @include border-radius(50%);
+                display: block;
+            }
+        }
+        .thumb-area {
+            width: calc(100% - 94px);
+            @include border-radius(0 10px 0 0);
+        }
+        @include breakpoint(lg) {
+            @include breakpoint(max-xl) {
+                .countdown-area {
+                    width: 70px;
+                }
+                .thumb-area {
+                    width: calc(100% - 70px);
+                }
+            }
+        }
+        @media screen and (max-width:399px) {
+            .countdown-area {
+                width: 70px;
+            }
+            .thumb-area {
+                width: calc(100% - 70px);
+            }
+        }
+    }
+    .auction-content {
+        padding: 0 10px 30px;
+        .title-area {
+            padding: 25px 0 16px;
+            .title {
+                margin: 0;
+                line-height: 28px;
+                font-size: 20px;
+                a {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                }
+            }
+            .item-feature {
+                margin: 0 -10px;
+                span {
+                    padding: 0 12px 0 10px;
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                    position: relative;
+                    &::after {
+                        content: "|";
+                        font-size: 12px;
+                        position: absolute;
+                        right: 0;top: 0;line-height: 1;
+                    }
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .custom-button {
+            width: 100%;
+            max-width: 230px;
+            text-align: center;
+        }
+        .bid-area {
+            @extend %flex;
+            .bid-amount {
+                padding: 12px 10px;
+                @extend %flex;
+                align-items: center;
+                border-bottom: 2px dotted #deddf5;
+                border-top: 2px dotted #deddf5;
+                width: 50%;
+                justify-content: center;
+                .icon {
+                    max-width: 30px;
+                    i {
+                        line-height: 1;
+                        font-size: 36px;
+                        color: $theme-two;
+                    }
+                    @include breakpoint(lg) {
+                        @include breakpoint(max-xl) {
+                            max-width: 25px;
+                            i {
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                }
+                .amount-content {
+                    padding-left: 15px;
+                    max-width: calc(100% - 30px);
+                    .current {
+                        font-size: 14px;
+                        color: $theme-two;
+                        line-height: 20px;
+                        margin-bottom: 5px;
+                    }
+                    .amount {
+                        font-size: 20px;
+                        line-height: 20px;
+                        color: $title-color;
+                    }
+                    @include breakpoint(lg) {
+                        @include breakpoint(max-xl) {
+                            max-width: calc(100% - 25px);
+                            .amount {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+                position: relative;
+                &::before {
+                    width: 1px;
+                    right: 0;
+                    bottom: 15px;
+                    top: 15px;
+                    @extend %pa;
+                    background: #bfbee8;
+                }
+                &:nth-child(even) {
+                    &::before {
+                        display: none;
+                    }
+                    .icon i,
+                    .amount-content .current {
+                        color: $theme-color;
+                    }
+                }
+                @include breakpoint(max-xl) {
+                    @include breakpoint(lg) {
+                        padding: 12px 5px;
+                    }
+                }
+                @media screen and (max-width: 450px) {
+                    padding: 12px 0;
+                    .icon {
+                        width: 25px;
+                        i {
+                            font-size: 30px;
+                        }
+                    }
+                    .amount-content {
+                        padding-left: 15px;
+                        .amount {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }        
+        .bid-count-area {
+            @extend %flex;
+            margin: -5px -20px 25px;
+            margin-top: 15px;
+            font-size: 14px;
+            align-items: center;
+            .item {
+                padding: 5px 20px;
+                color: $theme-two;
+                border-right: 1px solid #bfbee8;
+                display: inline-block;
+                line-height: 1;
+                max-width: 50%;
+                &:last-child {
+                    border: none;
+                }
+                .left {
+                    color: $title-color;
+                    &::after {
+                        content: " : ";
+                    }
+                }
+            }
+            .bid-count-area {
+                justify-content: center;
+                margin: -5px -15px 25px;
+            }
+        }
+    }
+    @media screen and (max-width:425px) {
+        .auction-content {
+            .bid-count-area {
+                .item {
+                    width: 100%;
+                    max-width: 100%;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+
+/*Team Section Starts Here*/
+.team-item {
+    max-width: 220px;
+    margin: 0 auto 30px;
+    padding: 0 15px;
+    .team-inner {
+        position: relative;
+        padding: 0 10px;
+        &::before {
+            @extend %pa;
+            top: 60px;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: 10px;
+            background: $white-color;
+            box-shadow: 1.753px 3.595px 10px 0px rgba(44, 46, 69, 0.09);
+        }
+        * {
+            position: relative;
+            z-index: 1;
+        }
+        .team-thumb {
+            a {
+                display: block;
+            }
+            img {
+                width: 100%;
+            }
+            @include border-radius(5px);
+            overflow: hidden;
+        }
+        .team-content {
+            padding: 15px 10px 5px;
+            text-align: center;
+            .social {
+                @extend %flex;
+                justify-content: center;
+                li {
+                    padding: 2px;
+                    a {
+                        color: $body-color;
+                        padding: 5px;
+                        font-size: 16px;
+                        line-height: 1;
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+                    &:nth-child(even) {
+                        a {
+                            color: $theme-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*Overview Section Starts Here*/
+.expert-item {
+    text-align: center;
+    margin-bottom: 40px;
+    .thumb {
+        height: 47px;
+        margin: 0 0 38px;
+        img {
+            max-height: 66px;
+        }
+    }
+    .content {
+        .title {
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+    }
+}
+.overview-content {
+    @include breakpoint(lg) {
+        max-width: 585px;
+        margin-left: auto;
+        padding-left: 30px;
+    }
+}
+
+/*Counter Section Starts Here*/
+.counter-item {
+    text-align: center;
+    padding: 28px 30px 30px;
+    border: 1px solid rgba(181, 156, 228, 0.5);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    .counter-header {
+        @extend %flex;
+        margin: 0;
+        justify-content: center;
+        .title {
+            margin-bottom: 20px;
+        }
+    }
+}
+/*About Section Starts Here*/
+.about-content {
+    position: relative;
+    z-index: 1;
+    .subtitle {
+        text-transform: uppercase;
+        margin-bottom: 19px;
+    }
+    .title {
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 19px;
+        span {
+            color: $theme-color;
+            margin-bottom: 10px;
+        }
+    }
+    p {color:$title-color}
+    .item-area {
+        @extend %flex;
+        margin: 0 -15px -20px;
+        max-width: 440px;
+        .item {
+            flex-grow: 1;
+            padding: 0 15px 20px;
+            text-align: center;
+            @include breakpoint(sm) {
+                max-width: 250px;
+            }
+            .thumb {
+                margin-bottom: 20px;
+                img {
+                    max-width: 100%;
+                }
+            }
+            p {
+                text-transform: uppercase;
+                color: $title-color;
+            }
+        }
+    }
+}
+.about-wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    background: $white-color;
+    box-shadow: 0 0 15px rgba(44, 46, 69, 0.15);      
+    position: relative;
+    @include breakpoint(max-sm) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    @include breakpoint(max-lg) {
+        padding-top: 50px;
+    }
+}
+.about-thumb {
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include breakpoint(max-lg) {
+        display: none;
+    }
+    top: 50px;
+    bottom: 50px;
+    right: 30px;
+    img {
+        width: unset !important;            
+        height: 100%;
+    }
+}
+.mt--100 {
+    margin-top: -100px;
+}
+.mt--240 {
+    margin-top: -240px;
+}
+@include breakpoint(lg) {
+    .mt-lg--440 {
+        margin-top: -440px;
+    }
+}
+/*Account Section Starts Here*/
+.login-with {
+    @extend %flex;
+    margin: -15px;
+    margin-bottom: 20px;
+    li {
+        flex-grow: 1;
+        padding: 15px;
+        a {
+            @extend %flex;
+            align-items: center;
+            padding: 12px 15px;
+            border: 1px solid rgba(97, 90, 191, .2);
+            @include border-radius(10px);
+            justify-content: center;
+            color: $title-color;
+            i {
+                margin-right: 7px;
+                &[class*="facebook"] {
+                    color: $facebook;
+                }
+                &[class*="google"] {
+                    color: $google;
+                }
+            }
+            &:hover {
+                background: $theme-color;
+                color: $white-color;
+                i {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+}
+.or {
+    position: relative;
+    margin-bottom: 20px;
+    &::before {
+        @extend %pa;
+        left: 0;
+        top: 50%;
+        height: 1px;
+        width: 100%;
+        background: rgba(97, 90, 191, .2);
+    }
+    text-align: center;
+    span {
+        display: inline-block;
+        padding: 0 25px;
+        background: $white-color;
+        position: relative;
+        color: $title-color;
+        z-index: 1;
+    }
+}
+.account-wrapper {
+    position: relative;
+    @extend %flex;
+    @include border-radius(10px);
+    background: $white-color;
+    box-shadow: 0 0 15px rgba(44, 46, 69, 0.11);      
+    .left-side {
+        padding: 60px 30px 60px 60px;
+        width: calc(100% - 350px);
+    }
+    .right-side {
+        background: -moz-linear-gradient( 90deg, rgb(81,64,254) 0%, rgb(119,87,247) 56%, rgb(157,110,240) 100%);
+        background: -webkit-linear-gradient( 90deg, rgb(81,64,254) 0%, rgb(119,87,247) 56%, rgb(157,110,240) 100%);
+        background: -ms-linear-gradient( 90deg, rgb(81,64,254) 0%, rgb(119,87,247) 56%, rgb(157,110,240) 100%);
+        @extend %flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        padding: 60px 30px;
+        .custom-button {
+            border: 1px solid rgba($color:$white-color, $alpha:.3);
+            font-weight: 400;
+        }
+        @include border-radius(0 10px 10px 0);
+    }
+    @include breakpoint(max-xl) {
+        .left-side {
+            padding-left: 30px;
+        }
+    }
+    @include breakpoint(max-lg) {
+        .left-side, .right-side {
+            width: 100%;
+        }
+        .right-side {
+            @include border-radius(0 0 10px 10px);
+        }
+    }
+    @include breakpoint(max-sm) {
+        .left-side, .right-side {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+.login-form {
+    .form-group {
+        position: relative;
+        font-size: 16px;
+        .pass-type {
+            right: 30px;
+            top: 50%;
+            @include transform(translateY(-50%));
+            position: absolute;
+            cursor: pointer;
+        }
+        input {
+            height: 50px;
+            border: 1px solid rgba(97, 90, 191, .2);
+            background: $white-color;
+            padding: 0 75px;
+        }
+        label {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            @include transform(translateY(-50%));
+            color: $body-color;
+        }
+        text-align: center;
+        a {
+            color: $body-color;
+        }
+        .custom-button {
+            font-size: 16px;
+            height: 50px;
+            padding: 0 50px;
+        }
+        &.checkgroup {
+            @extend %flex;
+            align-items: center;
+            text-align: left;
+            input {
+                width: 14px;
+                height: 14px;
+            }
+            label {
+                font-size: 14px;
+                margin: 0;
+                margin-top: 2px;
+                line-height: 1.3;
+                color: $title-color;
+                width: calc(100% - 14px);
+            }
+        }
+        @include breakpoint(max-sm) {
+            input {
+                padding: 0 30px 0 30px;
+            }
+            label {
+                left: 10px;
+            }
+            .pass-type {
+                right: 10px;
+            }
+        }
+    }
+}
+
+/*Contact Section Starts Here*/
+.contact-wrapper {
+    position: relative;
+    background: $white-color;
+    background-color: $white-color;
+    box-shadow: 0px 6px 18px 0px rgba(16, 5, 54, 0.17);
+    padding-left: 40px;
+    @include breakpoint(max-lg) {
+        padding-right: 40px;
+    }
+    @include breakpoint(max-sm) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.contact-form {
+    .form-group {
+        position: relative;
+        margin-bottom: 30px;
+        input {
+            height: 60px;
+            padding: 0 50px;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid $border-color;
+            &:focus {
+                border-bottom: 1px solid $theme-one;
+            }
+            @include border-radius(0);
+        }
+        label {
+            position: absolute;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            @include border-radius(50%);
+            background: -moz-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+            background: -webkit-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+            background: -ms-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+            box-shadow: 0px 3px 5px 0px rgba(162, 44, 202, 0.3);              
+            color: $white-color;
+            top: 15px;
+            text-align: center;
+            font-size: 14px;
+            &.message {
+                top: 0;
+            }
+        }
+        textarea {
+            padding: 5px 50px 0;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid $border-color;
+            &:focus {
+                border-bottom: 1px solid $theme-one;
+            }
+            @include border-radius(0);
+        }
+        .custom-button {
+            font-size: 16px;
+            height: 50px;
+            padding: 0 50px;
+        }
+        @include breakpoint(max-sm) {
+            input {
+                padding: 0 0 0 40px;
+            }
+            textarea {
+                padding: 5px 0 5px 40px ;
+            }
+        }
+    }
+}
+/*Error Section Starts Here*/
+.error-section {
+    min-height: 100vh;
+    @extend %flex;
+    justify-content: center;
+    align-items: center;
+}
+.error-wrapper {
+    max-width: 705px;
+    margin: 0 auto;
+    text-align: center;
+    .error-thumb {
+        margin-bottom: 50px;
+        img {
+            max-width: 100%;
+        }
+    }
+    .title {
+        color: $title-color;
+        a {
+            color: $theme-color;
+        }
+    }
+}
+/*Faq Section Menu Starts Here*/
+.sticky-menu {
+    position: sticky;
+    top: 120px;
+}
+.faq-menu {
+    padding: 60px 30px;
+    @include border-radius(20px);
+    ul {
+        li {
+            a {
+                padding: 8px 0;
+                color: $white-color;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    content: "\f105";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 600;
+                    left: 12px;
+                    top: 10px;
+                    opacity: 0;
+                }
+                &:hover,
+                &.active {
+                    @include border-radius(10px);
+                    background: rgba($color:$white-color, $alpha:.2);
+                    padding-left: 30px;
+                    &::before {opacity: 1;}
+                }
+            }
+        }
+    }
+    @include breakpoint(max-sm) {
+        padding: 40px 30px;
+    }
+    @include breakpoint(max-lg) {
+        max-width: 400px;
+        margin: 0 auto 30px;
+    }
+}
+.faq-video {
+    padding: 10px;
+    background: $white-color;
+    @include border-radius(20px);
+    text-align: center;
+    @include breakpoint(max-lg) {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .video-area {
+        @include border-radius(20px);
+        position: relative;
+        display: block;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+        .video-button-2 {
+            i {
+                background: $theme-one;
+                border-color: $theme-one;
+            }
+        }
+    }
+    .title {
+        margin: 0;
+        padding: 20px 0 10px;
+    }
+    box-shadow: 0px 9px 43px 0px rgba(16, 5, 54, 0.27);      
+}
+.mt-70 {
+    margin-top: 70px;
+}
+.video-button-2 {
+    @extend %center;
+    width: 280px;
+    height: 280px;
+    @include border-radius(50%);
+    @extend %flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    @media screen and (max-width:400px) {
+        width: 140px;
+        height: 140px;
+    }
+    span {
+        @extend %center;
+        display: block;
+        @include border-radius(50%);
+        width: 50px;
+        height: 50px;
+        &::after , &::before {
+            @extend %center;
+            width: 100%;
+            height: 100%;
+            @include border-radius(50%);
+            border: .1px solid #5bc4e1;
+            animation: videoTwo 8s linear infinite;
+            -webkit-animation: videoTwo 8s linear infinite;
+            -moz-animation: videoTwo 8s linear infinite;
+        }
+        &:nth-child(1) {
+            &::after {
+                animation-delay: 1s;
+                -webkit-animation-delay: 1s;
+                -moz-animation-delay: 1s;
+            }
+        }
+        &:nth-child(2) {
+            &::after {
+                animation-delay: 2s;
+                -webkit-animation-delay: 2s;
+                -moz-animation-delay: 2s;
+            }
+        }
+        &:nth-child(3) {
+            &::after {
+                animation-delay: 3s;
+                -webkit-animation-delay: 3s;
+                -moz-animation-delay: 3s;
+            }
+        }
+        &:nth-child(4) {
+            &::after {
+                animation-delay: 4s;
+                -webkit-animation-delay: 4s;
+                -moz-animation-delay: 4s;
+            }
+        }
+        &:nth-child(1) {
+            &::before {
+                animation-delay: 5s;
+                -webkit-animation-delay: 5s;
+                -moz-animation-delay: 5s;
+            }
+        }
+        &:nth-child(2) {
+            &::before {
+                animation-delay: 6s;
+                -webkit-animation-delay: 6s;
+                -moz-animation-delay: 6s;
+            }
+        }
+        &:nth-child(3) {
+            &::before {
+                animation-delay: 7s;
+                -webkit-animation-delay: 7s;
+                -moz-animation-delay: 7s;
+            }
+        }
+    }
+    i {
+        width: 50px;
+        height: 50px;
+        line-height: 40px;
+        text-align: center;
+        @include border-radius(50%);
+        display: block;
+        background: #2573d5;
+        color: $white-color;
+        border: 5px solid #72a2dd;
+    }
+}
+@keyframes videoTwo {
+    0% {
+        @include transform(translate(-50%, -50%)scale(1));
+        opacity: 1;
+    }
+    100% {
+        @include transform(translate(-50%, -50%)scale(5));
+        opacity: 0;
+    }
+}
+@-webkit-keyframes videoTwo {
+    0% {
+        @include transform(translate(-50%, -50%)scale(1));
+        opacity: 1;
+    }
+    100% {
+        @include transform(translate(-50%, -50%)scale(5));
+        opacity: 0;
+    }
+}
+@-o-keyframes videoTwo {
+    0% {
+        @include transform(translate(-50%, -50%)scale(1));
+        opacity: 1;
+    }
+    100% {
+        @include transform(translate(-50%, -50%)scale(5));
+        opacity: 0;
+    }
+}
+.faq-area {
+    background: $white-color;
+    border-radius: 10px;
+    position: relative; 
+    .faq-wrapper {
+        padding-left: 30px;
+        padding-right: 30px;
+        max-width: 790px ;     
+        margin: -20px auto 0;
+        @include breakpoint(max-md) {
+            padding: 0 15px;
+        }
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 50%;
+        box-shadow: 52.739px -211.524px 70px 0px rgba(44, 46, 69, 0.05),11.273px -80.212px 70px 0px rgba(44, 46, 69, 0.06);
+    }
+    * {
+        position: relative;
+        z-index: 1;
+    }
+}
+.faq-item {
+    padding: 0 30px;
+    border-radius: 10px;
+    background-color: #ebf2ff;
+    border: 1px solid rgba(101, 93, 202, .3);
+    box-shadow: -2.316px 18.858px 10px 0px rgba(26, 18, 65, 0.05);
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .faq-title {
+        @extend %flex;
+        cursor: pointer;
+        padding: 20px 0;
+        position: relative;
+        align-items: center;
+        img {
+            width: 40px;
+        }
+        .title {
+            align-self: center;
+            display: block;
+            width: calc(100% - 40px);
+            padding-right: 50px;
+            padding-left: 20px;
+            font-size: 20px;
+            color: #323636;
+            line-height: 28px;
+            font-family: $heading;
+        }
+        .right-icon {
+            border-radius: 50%;
+            background: -moz-linear-gradient( 90deg, rgb(61,169,245) 0%, rgb(104,61,245) 100%);
+            background: -webkit-linear-gradient( 90deg, rgb(61,169,245) 0%, rgb(104,61,245) 100%);
+            background: -ms-linear-gradient( 90deg, rgb(61,169,245) 0%, rgb(104,61,245) 100%);      
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            top: 50%;
+            @include transform(translateY(-50%));
+            right: 0;
+            position: absolute;
+            &::after, &::before { 
+                position: absolute;
+                content: '';
+                background: $white-color;
+                top: 50%;
+                -webkit-transition: all ease 0.3s;
+                -moz-transition: all ease 0.3s;
+                transition: all ease 0.3s;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            &::before {
+                width: 2px;
+                height: 20px;
+            }
+            &::after {
+                width: 20px;
+                height: 2px;
+            }
+        }
+    }
+    .faq-content {
+        padding: 30px 0;
+        border-top: 1px solid rgba(101, 93, 202, .3);
+        display: none;
+        p {
+            font-size: 16px;
+            color: #323636;
+        }
+    }
+    &.active {
+        .faq-content {display: block;}
+    }
+    &.open {
+        .faq-title {
+            .title {
+                color: $theme-color;
+            }
+            .right-icon {
+                &::before {
+                    -webkit-transform: translate(-50%, -50%) rotate(90deg);
+                    -ms-transform: translate(-50%, -50%) rotate(90deg);
+                    transform: translate(-50%, -50%) rotate(90deg);
+                }
+            }
+        }
+    }
+    @include breakpoint(max-md) {
+        padding: 0 15px;
+    }
+    @media screen and (max-width:499px) {
+        .faq-title {
+            padding-bottom: 10px;
+            .right-icon {
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                &::after {width: 15px;}
+                &::before {height: 15px;}
+            }
+            .title {
+                width: 100%;
+                padding-left: 0;
+                padding-right: 40px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+}
+.product-details {
+    .faq-item {
+        .faq-title {
+            @include breakpoint(md) {
+                padding: 15px 0;
+            }
+        }
+    }
+}
+.popular-article-item {
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 9px 18px 0px rgba(16, 5, 54, 0.17);      
+    background: $white-color;
+    position: relative;
+    margin-bottom: 20px;
+    .right-con {
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        font-size: 12px;
+        box-shadow: 0px 6px 18px 0px rgba(16, 5, 54, 0.17);          
+        @include border-radius(50%);
+        color: $theme-two;
+    }
+    .title {
+        margin-bottom: 20px;
+    }
+}
+.product-header {
+    padding: 5px 10px;
+    border: 1px solid rgba(13, 21, 75, .15);
+    box-shadow: 0px 14px 16px 0px rgba(31, 43, 92, 0.11);
+    @include border-radius(5px);
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    .product-header-item {
+        @extend %flex;
+        align-items: center;
+        justify-content: center;
+        color: $title-color;
+        font-size: 16px;
+        padding: 10px;
+        .item {
+            margin-right: 8px;
+        }
+        .select-bar {
+            height: 37px;
+            @include border-radius(19px);
+            width: 135px;
+            padding: 0;
+            padding-left: 30px;
+            .current {
+                line-height: 37px;
+                text-transform: capitalize;
+                font-size: 16px;
+                color: $title-color;
+            }
+            &::after {
+                height: 7px;
+                width: 7px;
+                border-color: $title-color;
+            }
+        }
+    }
+    @include breakpoint(max-lg) {
+        >* {
+            flex-grow: 1;
+        }
+    }
+    &.style-2 {
+        .product-search, .product-header-item {
+            @include breakpoint(lg) {
+                width: calc((100% - 20px) / 3);
+            }
+        }
+    }
+}
+.product-search {
+    margin: 10px;
+    position: relative;
+    @include breakpoint(lg) {
+        max-width: 240px;
+    }
+    input {
+        height: 100%;
+        background: transparent;
+        height: 37px;
+        @include border-radius(19px);
+        border: 1px solid rgba(13, 21, 75, .15);
+        font-size: 14px;
+        padding-right: 30px;
+    }
+    button {
+        height: 35px;
+        width: 35px;
+        text-align: center;
+        background: $white-color;
+        font-size: 14px;
+        position: absolute;
+        right: 1px;
+        bottom: 1px;
+        @include border-radius(19px);
+        border: none;
+    }
+}
+.pagination {
+    @extend %flex;
+    justify-content: center;
+    margin: -5px;
+    margin-top: 35px;
+    li {
+        padding: 5px;
+        a {
+            @include border-radius(50%);
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: $white-color;
+            border: 1px solid rgba(234, 234, 234, 0.1);
+            box-shadow: 0px 15px 30px 0px rgba(119, 123, 146, 0.1);   
+            color: $body-color; 
+            font-weight: 700;          
+            &.active, &:hover {
+                color: $white-color;
+                background: -moz-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+                background: -webkit-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);
+                background: -ms-linear-gradient( 166deg, rgb(242,40,118) 0%, rgb(148,45,217) 100%);              
+            }
+        }
+    }
+}
+/*Product Details Section Starts Here*/
+.product-bottom-slider {
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    @include breakpoint(max-sm) {
+        width: calc(100% - 90px);
+    }
+}
+.slide-bottom-item {
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(22, 26, 57, 0.36);
+    cursor: pointer;
+    @include breakpoint(max-sm) {
+        margin: 10px;
+        box-shadow: 0px 0px 5px rgba(22, 26, 57, 0.36);
+    }
+    .slide-inner {
+        border-radius: 20px;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+}
+.slide-top-item {
+    margin: 15px;
+    box-shadow: 0px 0px 15px rgba(22, 26, 57, 0.36);
+    background: $section-bg;
+    border-radius: 20px;
+    .slide-inner {
+        overflow: hidden;
+        border-radius: 20px;
+        img {
+            width: 100%;
+        }
+    }
+    @include breakpoint(max-sm) {
+        margin: 10px;
+        box-shadow: 0px 0px 5px rgba(22, 26, 57, 0.36);
+    }
+}
+.product-details-slider-top-wrapper {
+    margin: -15px;
+    margin-bottom: 0;
+    @include breakpoint(max-sm) {
+        margin: -10px;
+    }
+}
+.det-nav {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    @include border-radius(50%);
+    background-color: $white-color;
+    box-shadow: 0px 9px 20px 0px rgba(22, 26, 57, 0.36);
+    text-align: center;
+    color: $body-color;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    &:hover, &.active {
+        color: $white-color;
+        background: -moz-linear-gradient( 7deg, rgb(236,19,121) 0%, rgb(108,0,146) 100%);
+        background: -webkit-linear-gradient( 7deg, rgb(236,19,121) 0%, rgb(108,0,146) 100%);
+        background: -ms-linear-gradient( 7deg, rgb(236,19,121) 0%, rgb(108,0,146) 100%);
+        box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);          
+    }
+}
+.product-details-slider-wrapper {
+    position: relative;
+    margin-bottom: -10px;
+    margin-top: 20px;
+    @include breakpoint(sm) {
+        margin-bottom: -20px;
+    }
+}
+.det-prev {
+    left: 0;
+}
+.det-next {
+    right: 0;
+}
+.product-single-sidebar {
+    border: 1px solid rgba(101, 93, 202, .3);
+    border-radius: 30px;
+    padding: 36px 20px 30px;
+    .title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    .countdown {
+        font-size: 24px;
+        line-height: 1;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(101, 93, 202, .3);        
+        @include breakpoint(sm) {
+            font-size: 30px;
+            line-height: 1;
+            @include breakpoint(lg) {
+                @include breakpoint(max-xl) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+.mt-40-60-80 {
+    margin-top: 40px;
+    @include breakpoint(sm) {
+        margin-top: 60px;
+    }
+    @include breakpoint(md) {
+        margin-top: 80px;
+    }
+}
+.product-sidebar-area {
+    text-align: center;
+    @include breakpoint(max-lg) {
+        margin-top: 50px;
+        @include breakpoint(max-md) {
+            margin-top: 40px;
+        }
+    }
+    .cart-link {
+        color: #007ec3;
+        text-decoration: underline;
+        font-size: 16px;
+    }
+}
+.side-counter-area {
+    margin-bottom: -21px;
+    padding-top: 22px;
+    @include breakpoint(max-lg) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+        justify-content: center;
+        margin-bottom: -30px;
+        .side-counter-item {
+            padding: 0 15px;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+    }
+}
+.side-counter-item {
+    @extend %flex;
+    text-align: left;
+    align-items: center;
+    margin: 0 0 18px;
+    .thumb {
+        width: 44px;
+    }
+    .content {
+        width: calc(100% - 44px);
+        padding-left: 20px;
+        .count-title {
+            margin: 0 0 5px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
+.product-details-header {
+    margin-bottom: 21px;
+    ul {
+        @extend %flex;
+        margin: 0 -15px;
+        li {
+            padding: 0 15px;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 2px;
+                height: 14px;
+                top: 50%;
+                margin-top: -8px;
+                right: 0;
+                background: $border-color;           
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    @include breakpoint(sm) {
+        .title {
+            margin-bottom: 13px;
+        }
+    }
+}
+.price-table {
+    background: #ebf2ff;
+    border-radius: 10px;      
+    padding: 40px 30px;
+    li {
+        @extend %flex;
+        justify-content: space-between;
+        padding: 0;
+        margin-bottom: 5px;
+        * {
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &.header {
+            margin-bottom: 20px;
+        }
+        .price {
+            color: $theme-two;
+        }
+        .info {
+            color: $body-color;
+        }
+    }
+    @include breakpoint(max-sm) {
+        padding: 30px 15px;
+        li.header {
+            margin-bottom: 0;
+        }
+    }
+}
+.product-bid-area {
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(224, 224, 241);
+    border-top: 1px solid rgb(224, 224, 241); 
+}
+.product-bid-form {
+    @extend %flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -15px;
+    .search-icon {
+        width: 65px;
+        height: 65px;
+        margin: 15px;
+        img {
+            width: 100%;
+        }
+        @include breakpoint(max-sm) {
+            display: none;
+        }
+    }
+    button, input {
+        margin: 15px;
+        width: unset;
+    }
+    input {
+        flex-grow: 1;
+        height: 50px;
+        padding: 0px 30px;
+        @include border-radius(25px);
+        border: 1px solid rgb(224, 224, 241);
+        background: transparent;
+    }
+    button.custom-button {
+        text-transform: capitalize;
+        height: 50px;
+    }
+    @include breakpoint(max-md) {
+        margin: -10px;
+        button, input, .search-icon {
+            margin: 10px;
+        }
+    }
+}
+.rating {
+    i {
+        color: $star;
+    }
+}
+.custom-button {
+    &.border {
+        border: 1px solid $border-color;
+    }
+}
+.buy-now-area {
+    @extend %flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    margin: -5px;
+    > *{
+        margin: 5px;
+        margin-top: 15px;
+    }
+}
+.share-area {
+    @extend %flex;
+    align-items: center;
+    span {
+        margin-right: 10px;
+    }
+    ul {
+        @extend %flex;
+        li {
+            padding: 0 5px;
+            a {
+                padding: 5px;
+                color: $body-color;
+                &:hover {
+                    color: $star;
+                }
+            }
+        }
+    }
+}
+.mb-40-60 {
+    margin-bottom: 40px;
+    @include breakpoint(md) {
+        margin-bottom: 60px;
+    }
+}
+.tab-details-content {
+    .title {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    .item {
+        margin-bottom: 35px;
+        p {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .subtitle {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: -7px !important;
+            }
+            li {
+                padding: 0;
+            }
+        }
+        @include breakpoint(md) {
+            margin-bottom: 45px;
+            .title {
+                margin-bottom: 18px;
+            }
+            .subtitle {
+                margin-bottom: 15px;
+            }
+            ul {
+                margin-bottom: 25px;
+                &:last-child {
+                    margin-bottom: -7px !important;
+                }
+                li {
+                    padding: 0;
+                }
+            }
+            p {
+                margin-bottom: 25px;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.product-info-table {
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #eaeaea;
+    tbody {
+        @extend %flex;
+        tr {
+            width: 50%;
+            display: flex;
+            word-wrap: wrap;
+            font-size: 16px;
+            th, td {
+                width: 50%;
+                display: block;
+                padding: 10px ;
+                font-weight: 400;
+            }
+            th {
+                color: $title-color;
+            }
+            td {
+                padding-left: 20px;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                    content: ":";
+                }
+            }
+            &:nth-of-type(4n + 3),
+            &:nth-of-type(4n + 4) {
+                background: #ebf2ff;
+            }
+            @include breakpoint(max-md) {
+                width: 100%;
+                &:nth-of-type(4n + 1),
+                &:nth-of-type(4n + 3) {
+                    background: #ebf2ff;
+                }
+                &:nth-of-type(4n + 2),
+                &:nth-of-type(4n + 4) {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+.product-tab-menu-area {
+    background: #ebf2ff;
+}
+.mt-70-100 {
+    margin-top: 70px;
+    @include breakpoint(lg) {
+        margin-top: 100px;
+    }
+}
+.product-tab-menu {
+    border: none;
+    align-items: stretch;
+    margin: 0 -15px;
+    padding: 10px 0;
+    li {
+        padding: 10px 15px;
+        flex-grow: 1;
+        @extend %flex;
+        align-items: center;
+        a {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid rgba(101, 93, 202, 0.3);
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            &.active {
+                background: $white-color;
+                box-shadow: 0.707px 0.707px 10px 0px rgba(55, 34, 154, 0.1);                  
+            }
+            .thumb {
+                max-width: 100%;
+            }
+            .content {
+                color: $title-color;
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+.shipping-table {
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #eaeaea;
+    // text-align: center;
+    thead {
+        th {
+            color: $title-color;
+            text-transform: capitalize;
+            padding: 15px 10px 15px 20px;
+            font-weight: 500;
+        }
+    }
+    tbody {
+        tr {
+            font-size: 16px;
+            td {
+                // width: 50%;
+                padding: 10px ;
+                font-weight: 400;
+            }
+            th {
+                color: $title-color;
+            }
+            td {
+                padding-left: 20px;
+                position: relative;
+                &:nth-of-type(even) {
+                    &::before {
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        @include transform(translateY(-50%));
+                        content: ":";
+                    }
+                }
+            }
+            &:nth-of-type(odd) {
+                background: #ebf2ff;
+            }
+        }
+    }
+    @include breakpoint(max-sm) {
+        min-width: 550px;
+    }
+}
+.shipping-wrapper, .history-wrapper {
+    .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+    }
+    .item {
+        margin-bottom: 35px;
+        p {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .title {
+            margin-bottom: 18px;
+            text-transform: capitalize;
+        }
+        ul {
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: -7px !important;
+            }
+            li {
+                padding: 0;
+            }
+        }
+        @include breakpoint(md) {
+            margin-bottom: 45px;
+            .title {
+                margin-bottom: 18px;
+            }
+            ul {
+                margin-bottom: 25px;
+                &:last-child {
+                    margin-bottom: -7px !important;
+                }
+                li {
+                    padding: 0;
+                }
+            }
+            p {
+                margin-bottom: 25px;
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.history-table-area {
+    background: #ebf2ff;
+    @include border-radius(5px);
+    padding: 20px 40px;
+    @include breakpoint(max-lg) {
+        padding: 30px;
+    }
+    @include breakpoint(max-sm) {
+        padding: 30px 15px;
+    }
+}
+.history-table {
+    width: 100%;
+    tr {
+        border-bottom: 1px solid #c2d2ef;
+        td, th {
+            text-align: center;
+            &:first-child{
+                text-align: left;
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+            color: $title-color;
+        th {
+            text-transform: capitalize;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 15px 0;
+        }
+        td {
+            padding: 10px 0;
+        }
+    }
+    .user-info {
+        @extend %flex;
+        align-items: center;
+        .thumb {
+            width: 60px;
+            height: 60px;
+            @include border-radius(50%);
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        .content {
+            padding-left: 20px;
+        }
+    }
+    @include breakpoint(max-lg) {
+        .user-info {
+            .thumb {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        font-size: 16px;
+        td {
+            padding: 15px 0;
+        }
+        tr th {
+            font-size: 18px;
+        }
+    }
+    @include breakpoint(max-md) {
+        .content {            
+            color: $theme-color;
+        }
+        @include breakpoint(max-sm) {
+            .user-info {
+                display: block;
+                .content {
+                    padding: 0;
+                }
+                .thumb {
+                    margin: 0 auto 5px;
+                }
+            }
+        }
+        thead {
+            display: none;
+        }
+        tbody {
+            tr {
+                display: block;
+                td {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    padding: 10px 0;
+                    &::before {
+                        content: attr(data-history);
+                        text-transform: uppercase;
+                        color: $theme-seven;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.faq-head-title {
+    text-transform: capitalize;
+    margin-bottom: 18px;
+    @include breakpoint(md) {
+        margin-bottom: 25px;
+    }
+}
+/*Dashboard Section Starts Here*/
+.dashboard-widget {
+    border-radius: 20px;
+    background-color: $white-color;
+    box-shadow: 0px 6px 18px 0px rgba(16, 5, 54, 0.17);
+    padding: 30px 20px;
+    @media screen and (min-width:450px) {
+        padding: 30px;
+    }
+    .user {
+        text-align: center;
+        margin-bottom: 30px;
+        .thumb-area {
+            width: 100px;
+            margin: 0 auto 30px;
+            position: relative;
+            .profile-pic-edit {
+                position: absolute;
+                bottom: 10px;
+                right: 0;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                @include border-radius(50%);
+                font-size: 16px;
+                color: $white-color;
+                background: -moz-linear-gradient( 135deg, rgb(135,57,230) 0%, rgb(84,150,255) 100%);
+                background: -webkit-linear-gradient( 135deg, rgb(135,57,230) 0%, rgb(84,150,255) 100%);
+                background: -ms-linear-gradient( 135deg, rgb(135,57,230) 0%, rgb(84,150,255) 100%);
+                box-shadow: 0px 19px 56px 0px rgba(0, 0, 0, 0.2);
+                margin: 0;
+            }
+            .thumb {
+                @include border-radius(50%);
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .content {
+            .title {
+                margin-bottom: 0;
+            }
+        }
+    }
+    h2, h3, h4, h5, h6 {
+        color: $title-two;
+        a {
+            color: $title-two;
+        }
+    }
+    .dashboard-title {
+        border-bottom: 1px solid #d5d7f3;
+        .title {
+            padding-bottom: 20px;
+        }
+    }
+}
+.dashboard-menu {
+    li {
+        padding: 0;
+        margin-bottom: 1px;
+        a {
+            padding: 10px 20px;
+            color: #37406f;
+            text-transform: capitalize;
+            font-weight: 500;
+            line-height: 30px;
+            @include border-radius(25px);
+            display: block;
+            i {
+                font-weight: 400;
+                margin-right: 10px;
+                color: $theme-color;
+            }
+            &:hover, &.active {
+                background: #f7f6fc;
+            }
+        }
+    }
+}
+.dashboard-item {
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2.487px 1.678px 57px 0px rgba(16, 5, 54, 0.13);
+    margin-bottom: 30px;
+    padding: 40px 15px 30px;
+    text-align: center;
+    .thumb {
+        height: 80px;
+        margin-bottom: 16px;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+.dashboard-purchasing-tabs {
+    .nav-tabs {
+        margin-bottom: 25px;
+        li {
+            padding: 0 10px;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+            a {
+                padding: 10px 0;
+                position: relative;
+                color: $title-two;
+                &::after {
+                    bottom: -1px;
+                    left: 0;
+                    right: 100%;
+                    top: calc(100% - 3px);
+                    background: $theme-color;
+                    position: absolute;
+                    content: "";
+                    @include transition($transition);
+                }
+                &.active {
+                    &::after {
+                        right: 0;
+                    }
+                }
+            }
+            @include breakpoint(md) {
+                padding: 0 20px;
+                a {
+                    font-size: 22px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+.purchasing-table {
+    width: 100%;
+    font-size: 16px;
+    thead {
+        th {
+            color: $title-two;
+        }
+    }
+    tbody {
+        tr {
+            font-size: 16px;
+            color: $title-color;
+            font-weight: 500;
+            &:hover {
+                background: rgba(215, 217, 245, 0.078);
+            }
+            td {
+                padding: 13px 0;
+                border-bottom: 1px solid rgba(215, 217, 245, 0.502);
+                @include transition($transition);
+            }
+        }
+    }
+    @include breakpoint(max-md) {
+        thead {
+            display: none;
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 3px 7px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    &:last-child {
+                        padding-bottom: 10px;
+                    }
+                    &:first-child {
+                        padding-top: 10px;
+                    }
+                    &::before {
+                        content: attr(data-purchase);
+                        color: $theme-seven;
+                        text-transform: capitalize;
+                    }
+                }
+                &:hover {
+                    background: unset;
+                }
+                &:nth-last-of-type(2n - 1) {
+                    background: rgba(215, 217, 245, 0.3);
+                }
+            }
+        }
+    }
+}
+
+/*Profile Section Starts Here*/
+.dash-pro-item {
+    .header {
+        @extend %flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        .title {
+            margin: 0;
+            width: calc(100% - 80px);
+        }
+        .edit {
+            text-align: right;
+            width: 80px;
+            cursor: pointer;
+        }
+        @include breakpoint(max-sm) {
+            margin-bottom: 20px;
+            .title {
+                width: calc(100% - 70px);
+            }
+            .edit {
+                width: 70px;
+                font-size: 14px;
+            }
+        }
+    }
+    .dash-pro-body {
+        li {
+            @extend %flex;
+            color: #37406f;
+            padding: 0;
+            margin-bottom: 8px;
+            .info-name {
+                width: 135px;
+                position: relative;
+                padding-right: 15px;
+                &:after {
+                    content: ":";
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            .info-value {
+                width: calc(100% - 135px);
+                padding-left: 20px;
+                i {
+                    font-size: 14px;
+                }
+            }
+            @include breakpoint(max-sm) {
+                .info-name, .info-value {
+                    width: 100%;
+                    padding: 0;
+                    font-size: 16px;
+                    &::after {
+                        display: none;
+                    }
+                }
+                .info-name {
+                    color: $theme-color;
+                    margin-bottom: -3px;
+                }
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+.dash-bid-item {
+    .header {
+        @extend %flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        .title {
+            margin: 0;
+        }
+        @include breakpoint(max-sm) {
+            margin-bottom: 20px;
+            .edit {
+                font-size: 14px;
+            }
+        }
+    }
+    .button-area {
+        @extend %flex;
+        margin: -10px;
+        border: none;
+        li {
+            padding: 10px;
+            .custom-button {
+                text-transform: capitalize;
+                &.active {
+                    color: $white-color;
+                    background: -moz-linear-gradient(92deg, #ff8359 0%, #ffdf40 100%);
+                    background: -webkit-linear-gradient(92deg, #ff8359 0%, #ffdf40 100%);
+                    background: -ms-linear-gradient(92deg, #ff8359 0%, #ffdf40 100%);
+                }
+            }
+        }
+        .list {
+            li {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+.sort-winning-bid {
+    @extend %flex;
+    align-items: center;
+    justify-content: center;
+    color: $title-color;
+    font-size: 16px;
+    padding: 10px;
+    .item {
+        margin-right: 8px;
+    }
+    .select-bar {
+        height: 37px;
+        @include border-radius(19px);
+        width: 135px;
+        padding: 0;
+        padding-left: 30px;
+        .current {
+            line-height: 37px;
+            text-transform: capitalize;
+            font-size: 16px;
+            color: $title-color;
+        }
+        &::after {
+            height: 7px;
+            width: 7px;
+            border-color: $title-color;
+        }
+    }
+}
+/*Alert Section Starts Here*/
+.alert-widget {
+    ul {
+        padding: 23px 0 20px;
+        margin-bottom: -50px;
+        li {
+            @extend %flex;
+            align-items: start;
+            padding: 0;
+            margin-bottom: 40px;
+            input {
+                width: 25px;
+                height: 0;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    @include border-radius(3px);
+                    left: 0;
+                    top: 0;
+                    width: 25px;
+                    height: 25px;
+                    border: 1px solid $border-color;
+                }
+                &:checked {
+                    &::after {
+                        opacity: 1;
+                        background: url(./img/check.png) no-repeat center center;
+                    }
+                }
+            }
+            label {
+                width: calc(100% - 25px);
+                margin: 0;
+                padding-left: 30px;
+                .title {
+                    margin-bottom: 19px;
+                }
+                @include breakpoint(max-sm) {
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+}
+/*Refferral Section Starts Here*/
+.referral-form {
+    position: relative;
+    input {
+        height: 50px;
+        @include border-radius(25px);
+        border: 1px solid rgba(55, 64, 111, 0.2);
+        background-color: rgb(251, 252, 255);
+        box-shadow: 4.822px 9.887px 8px 0px rgba(167, 169, 192, 0.13);
+        padding: 0 20px;
+    }
+    button.custom-button {
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 18px;
+        height: 50px;
+        @include border-radius(25px);
+        color: $white-color;
+        margin-top: 20px;
+    }
+    @include breakpoint(md) {
+        input {
+            padding: 0 180px 0 20px;
+        }
+        button.custom-button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 0px 60px;   
+            margin: 0;    
+        } 
+    }
+}
+.dashboard-widget {
+    .share-area {
+        @extend %flex;
+        align-items: center;
+        margin-bottom: -10px;
+        .left {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .social-icons {
+            margin-bottom: 10px;
+            li {
+                a {
+                    padding: 0;
+                    border: 1px solid rgb(234, 234, 234);
+                    border-radius: 50%;
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: 0px 15px 30px 0px rgba(119, 123, 146, 0.1);                      
+                    &:hover, &.active {
+                        background: $theme-bg;
+                        color: $white-color ;
+                    }
+                }
+            }
+        }
+    }
+    .stats {
+        span {
+            font-size: 18px;
+            margin-left: 7px;
+        }
+        &:last-child {
+            margin-bottom: -13px;
+        }
+    }
+}
+.referral-table {
+    width: 100%;
+    tr {
+        td, th {
+            text-align: center;
+            &:first-child {
+                text-align: left;
+            }
+            &:last-child {
+                text-align: right;
+            }
+        }
+    }
+    thead {
+        tr {
+            th {
+                font-weight: 400;
+                color: $title-two;
+            }
+        }
+    }
+    tbody {
+        tr {
+            font-size: 16px;
+            color: $title-color;
+            &:hover {
+                background: rgba(215, 217, 245, 0.078);
+            }
+            td {
+                padding: 13px 0;
+                border-bottom: 1px solid rgba(215, 217, 245, 0.502);
+                @include transition($transition);
+            }
+        }
+    }
+    @include breakpoint(max-sm) {
+        thead {
+            display: none;
+        }
+        tbody {
+            tr {
+                td {
+                    padding: 3px 7px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    // border: none;
+                    &:last-child {
+                        padding-bottom: 10px;
+                    }
+                    &:first-child {
+                        padding-top: 10px;
+                    }
+                    &::before {
+                        content: attr(data-label);
+                        color: $theme-seven;
+                        text-transform: capitalize;
+                    }
+                }
+                // border-bottom: 1px solid rgba(215, 217, 245, 0.502);
+                &:hover {
+                    background: unset;
+                }
+                &:nth-last-of-type(2n - 1) {
+                    background: rgba(215, 217, 245, 0.3);
+                }
+            }
+        }
+    }
+}
+.cart-sidebar-area .single-product-item .content .title a {
+    color: $white-color;
+    &:hover {
+        color: $theme-color;
+    }
+}
